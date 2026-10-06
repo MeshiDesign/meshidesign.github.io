@@ -1,0 +1,650 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Meshi Naftalevich | UX/UI Designer</title>
+<meta name="description" content="משי נפתלביץ, מעצבת UX/UI. תיק עבודות: אתרי מסחר, אפליקציות ומיתוג. Meshi Naftalevich, UX/UI Designer portfolio.">
+<meta name="theme-color" content="#07080C">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Meshi Naftalevich | UX/UI Designer">
+<meta property="og:description" content="תיק עבודות UX/UI: אתרי מסחר, אפליקציות ומיתוג.">
+<meta property="og:image" content="https://DOMAIN/og.jpg">
+<meta property="og:url" content="https://DOMAIN/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<style>html,body{background:#07080C}</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=IBM+Plex+Mono:wght@400;500&family=Heebo:wght@300;400;500;700&display=swap">
+<style>
+:root{--bg:#07080c;--bg2:#0d0f16;--fg:#f3f4f8;--mut:#8f94a8;--line:rgba(255,255,255,.09);--acc:#3D6BFF;--acc2:#C6FF3D;--c:#3D6BFF;--c2:#C6FF3D;--glow:rgba(61,107,255,.3)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;overflow-x:clip}
+html,body{margin:0;background:var(--bg);color:var(--fg);font-family:"Heebo",system-ui,sans-serif;direction:rtl}
+html[lang="en"] body{font-family:"Heebo","Manrope",system-ui,sans-serif}
+body{overflow-x:clip;line-height:1.5}
+a{color:inherit}
+button{font:inherit;cursor:pointer;color:inherit}
+img{max-width:100%;display:block}
+::selection{background:var(--acc);color:#fff}
+.mono{font-family:"IBM Plex Mono",monospace;direction:ltr;unicode-bidi:isolate}
+.syne{font-family:"Syne",sans-serif;direction:ltr;unicode-bidi:isolate}
+.k{font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--c2);direction:ltr;unicode-bidi:isolate;display:inline-block}
+.grain{pointer-events:none;position:absolute;inset:0;opacity:.07;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");mix-blend-mode:screen}
+.wrap{max-width:1240px;margin:0 auto;padding:0 32px}
+@media (max-width:700px){.wrap{padding:0 18px}}
+
+/* ---------- nav ---------- */
+.nav{position:fixed;top:0;left:0;right:0;z-index:60;display:flex;justify-content:space-between;align-items:center;padding:14px 26px;background:linear-gradient(rgba(7,8,12,.85),rgba(7,8,12,0));pointer-events:none}
+.nav>*{pointer-events:auto}
+.nav .logo{font-family:"Syne",sans-serif;font-weight:800;font-size:18px;letter-spacing:-.02em;text-decoration:none;direction:ltr}
+.nav .logo i{color:var(--acc2);font-style:normal}
+.nav .links{display:flex;gap:6px;align-items:center;font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.06em}
+.nav .links a{text-decoration:none;color:#dfe2ee;padding:8px 12px;border-radius:999px;border:1px solid transparent;transition:.2s}
+.nav .links a:hover{border-color:var(--line);background:rgba(255,255,255,.06)}
+.lang{display:inline-flex;border:1px solid var(--line);border-radius:999px;padding:3px;background:rgba(7,8,12,.5);backdrop-filter:blur(8px);margin-inline-start:8px}
+.lang button{border:0;background:transparent;color:var(--mut);font-family:"IBM Plex Mono",monospace;font-size:11px;padding:5px 10px;border-radius:999px;letter-spacing:.06em}
+.lang button.on{background:var(--fg);color:#07080c}
+.prog{position:fixed;top:0;left:0;height:2px;background:linear-gradient(90deg,var(--acc2),var(--acc));width:0;z-index:61}
+
+/* ---------- hero ---------- */
+.hero{position:relative;height:92vh;min-height:620px;overflow:hidden;background:radial-gradient(1200px 700px at 50% 110%,#0e1838 0%,#07080c 60%)}
+.hero .cam{position:absolute;inset:0;perspective:1400px;perspective-origin:50% 40%}
+.hero .plane{position:absolute;left:50%;top:50%;width:2800px;height:2200px;margin:-1100px 0 0 -1400px;transform-style:preserve-3d;transform:rotateX(58deg) rotateZ(-18deg) translateZ(-200px);transition:transform .5s ease-out}
+.hero .flow{position:absolute;inset:0;display:grid;grid-template-columns:repeat(6,1fr);gap:34px;padding:20px;animation:drift 28s linear infinite;direction:ltr}
+@keyframes drift{from{transform:translate(0,0)}to{transform:translate(-560px,-380px)}}
+.hero .cardw{border-radius:10px;overflow:hidden;background:#11131c;box-shadow:0 30px 80px rgba(0,0,0,.6),0 0 0 1px rgba(255,255,255,.08);aspect-ratio:4/3}
+.hero .cardw img{width:100%;height:100%;object-fit:cover;object-position:top;filter:saturate(1.05) brightness(.6)}
+.hero .cardw.tall{grid-row:span 2;aspect-ratio:auto}
+.hero .fade{position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,#07080c 0%,rgba(7,8,12,0) 30%,rgba(7,8,12,.2) 60%,#07080c 100%),linear-gradient(90deg,#07080c 0%,rgba(7,8,12,0) 20%,rgba(7,8,12,0) 80%,#07080c 100%)}
+.hero .hud{position:absolute;inset:0;display:grid;place-items:center;padding:0 24px;text-align:center}
+.hero .box{max-width:980px;padding:36px 30px;border-radius:40px;background:radial-gradient(closest-side,rgba(7,8,12,.9),rgba(7,8,12,.6) 70%,transparent)}
+.hero h1{font-family:"Syne",sans-serif;font-weight:800;font-size:clamp(46px,8.5vw,128px);line-height:.94;letter-spacing:-.035em;margin:0;text-wrap:balance;direction:ltr}
+.hero h1 span{color:var(--acc2)}
+.hero p{font-size:clamp(16px,1.6vw,20px);color:#c9ccda;margin:24px auto 0;max-width:42ch;line-height:1.65;font-weight:300}
+.hero p b{font-weight:500;color:#fff}
+.hero .cta{display:inline-flex;align-items:center;gap:10px;margin-top:30px;padding:13px 22px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);color:#fff;font-weight:500;font-size:14.5px;backdrop-filter:blur(10px);transition:.2s;text-decoration:none}
+.hero .cta:hover{background:rgba(255,255,255,.16);transform:translateY(-1px)}
+.hero .cta i{width:8px;height:8px;border-radius:50%;background:var(--acc2);box-shadow:0 0 12px var(--acc2)}
+@media (max-width:700px){.hero .plane{transform:rotateX(58deg) rotateZ(-18deg) translateZ(-500px)}}
+@media (prefers-reduced-motion:reduce){.hero .flow{animation:none}}
+
+/* ---------- home: cards ---------- */
+.work{padding:60px 0 20px}
+.work .hd{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap;margin-bottom:26px}
+.work .hd h2{font-family:"Syne",sans-serif;font-weight:800;font-size:clamp(34px,5vw,64px);letter-spacing:-.035em;margin:8px 0 0;direction:ltr;line-height:1}
+.work .hd p{color:var(--mut);margin:0;max-width:46ch;font-weight:300}
+.card{position:relative;display:grid;grid-template-columns:1fr 1.25fr;gap:40px;align-items:center;min-height:560px;margin:0 0 22px;padding:48px;border-radius:28px;text-decoration:none;color:inherit;overflow:hidden;background:linear-gradient(135deg,rgba(255,255,255,.04),rgba(255,255,255,.015));box-shadow:0 0 0 1px var(--line);isolation:isolate;transition:box-shadow .35s,transform .35s}
+.card::before{content:"";position:absolute;inset:-40%;background:radial-gradient(40% 50% at 70% 40%,var(--glow),transparent 70%);opacity:.6;transition:opacity .5s,transform .8s;z-index:-1}
+.card.flip{grid-template-columns:1.25fr 1fr}
+.card.flip .txt{order:2}
+.card.flip::before{background:radial-gradient(40% 50% at 30% 40%,var(--glow),transparent 70%)}
+.card:hover{box-shadow:0 0 0 1px color-mix(in srgb,var(--c) 45%,transparent),0 40px 100px rgba(0,0,0,.5);transform:translateY(-3px)}
+.card:hover::before{opacity:1;transform:scale(1.08)}
+.card .num{font-size:12px;color:var(--mut);letter-spacing:.2em}
+.card h2{font-family:"Syne",sans-serif;font-weight:800;font-size:clamp(40px,5.2vw,76px);letter-spacing:-.04em;line-height:.95;margin:12px 0 10px;direction:ltr;text-align:start}
+.card .sub{font-size:12px;color:var(--c);letter-spacing:.14em;text-transform:uppercase;margin:0 0 16px;text-align:start}
+.card .tag{font-size:16.5px;line-height:1.65;color:#d5d8e4;margin:0 0 20px;max-width:40ch;font-weight:300}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips span{font-family:"IBM Plex Mono",monospace;font-size:11.5px;padding:6px 11px;border:1px solid var(--line);border-radius:999px;color:#dfe2ee;direction:ltr;background:rgba(255,255,255,.03)}
+.card .cta{display:inline-flex;align-items:center;gap:10px;margin-top:28px;font-weight:500;font-size:15px;color:#fff}
+.card .cta i{font-style:normal;display:inline-grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--c);color:#07080c;transition:transform .3s;direction:ltr}
+html[dir="rtl"] .card .cta i{transform:scaleX(-1)}
+.card:hover .cta i{transform:translateX(4px)}
+html[dir="rtl"] .card:hover .cta i{transform:scaleX(-1) translateX(4px)}
+.card .vis{position:relative;height:440px;perspective:1400px;direction:ltr}
+.card .brw{position:absolute;left:0;right:12%;top:20px;bottom:0;border-radius:12px;overflow:hidden;background:#0f1118;box-shadow:0 50px 120px rgba(0,0,0,.7),0 0 0 1px rgba(255,255,255,.1);transform:rotateY(-8deg) rotateX(4deg);transition:transform .6s cubic-bezier(.2,.8,.2,1)}
+.card.flip .brw{left:12%;right:0;transform:rotateY(8deg) rotateX(4deg)}
+.card:hover .brw{transform:rotateY(0) rotateX(0)}
+.card .brw .bar{height:30px;display:flex;align-items:center;gap:6px;padding:0 12px;background:#161923;border-bottom:1px solid var(--line)}
+.card .brw .bar i{width:9px;height:9px;border-radius:50%;background:#333848}
+.card .brw .bar i:nth-child(1){background:#ff5f57}.card .brw .bar i:nth-child(2){background:#febc2e}.card .brw .bar i:nth-child(3){background:#28c840}
+.card .brw .vp{position:absolute;inset:30px 0 0 0;overflow:hidden}
+.card .brw .vp img{width:100%;transition:transform 7s linear}
+.card:hover .brw .vp img{transform:translateY(calc(-100% + 410px))}
+.card .ph2{position:absolute;right:0;bottom:-10px;width:26%;aspect-ratio:9/19.3;border-radius:26px;background:#000;box-shadow:0 40px 100px rgba(0,0,0,.8),0 0 0 1px rgba(255,255,255,.14),inset 0 0 0 5px #111;overflow:hidden;transform:translateY(20px);transition:transform .6s cubic-bezier(.2,.8,.2,1)}
+.card.flip .ph2{right:auto;left:0}
+.card:hover .ph2{transform:translateY(0) rotate(-2deg)}
+.card .ph2 img{position:absolute;inset:5px;width:calc(100% - 10px);border-radius:22px}
+.card .sl2{position:absolute;right:-4%;bottom:-6px;width:46%;border-radius:10px;overflow:hidden;box-shadow:0 40px 100px rgba(0,0,0,.8),0 0 0 1px rgba(255,255,255,.14);transform:translateY(16px) rotate(2deg);transition:transform .6s cubic-bezier(.2,.8,.2,1)}
+.card.flip .sl2{right:auto;left:-4%}
+.card:hover .sl2{transform:translateY(0) rotate(0)}
+@media (max-width:900px){.card,.card.flip{grid-template-columns:1fr;padding:26px;min-height:0}.card.flip .txt{order:0}.card .vis{height:300px}.card .brw{right:0;transform:none}.card.flip .brw{left:0}.card .ph2{width:30%}}
+
+/* ---------- about ---------- */
+.about{position:relative;max-width:1240px;margin:0 auto;padding:90px 32px 100px;display:grid;grid-template-columns:1.15fr 1fr;gap:50px;align-items:center;overflow:visible}
+.about h2{font-family:"Syne",sans-serif;font-weight:800;font-size:clamp(36px,5vw,72px);letter-spacing:-.035em;margin:10px 0 18px;line-height:.95;direction:ltr;text-align:start;color:#F5C8D8}
+.about p{color:#c9ccda;font-size:17px;line-height:1.75;max-width:54ch;font-weight:300;margin:0 0 14px}
+.about .tools{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.about .tools span{font-family:"IBM Plex Mono",monospace;font-size:12px;padding:7px 12px;border:1px solid var(--line);border-radius:999px;color:#dfe2ee;direction:ltr}
+.about .tools span.ai{background:var(--fg);color:#07080c;border-color:var(--fg)}
+.about a.mail{display:inline-flex;align-items:center;gap:10px;margin-top:26px;padding:14px 24px;border-radius:999px;background:var(--fg);color:#07080c;text-decoration:none;font-weight:500;font-size:15px}
+/* portrait concept: cutout on a lit stage with ghost type + floating chips */
+.stage-me{position:relative;aspect-ratio:4/5;max-width:520px;justify-self:center;width:100%;isolation:isolate;direction:ltr}
+.stage-me .ghost{position:absolute;left:50%;top:6%;transform:translateX(-50%);font-family:"Syne",sans-serif;font-weight:800;font-size:clamp(110px,21vw,262px);line-height:.8;letter-spacing:-.05em;color:transparent;-webkit-text-stroke:1.5px rgba(255,255,255,.28);white-space:nowrap;z-index:0;user-select:none}
+.stage-me .ghost b{display:block;color:transparent;-webkit-text-stroke:1.5px rgba(198,255,61,.5)}
+.stage-me .light{position:absolute;left:50%;bottom:8%;width:120%;height:70%;transform:translateX(-50%);background:radial-gradient(50% 60% at 50% 70%,rgba(61,107,255,.55),rgba(198,255,61,.16) 45%,transparent 72%);filter:blur(30px);z-index:0;animation:breathe 6s ease-in-out infinite}
+@keyframes breathe{0%,100%{opacity:.8;transform:translateX(-50%) scale(1)}50%{opacity:1;transform:translateX(-50%) scale(1.06)}}
+.stage-me .me{position:absolute;left:50%;bottom:0;width:78%;transform:translateX(-50%);z-index:2;filter:drop-shadow(0 40px 60px rgba(0,0,0,.7));-webkit-mask-image:linear-gradient(#000 82%,transparent 100%);mask-image:linear-gradient(#000 82%,transparent 100%)}
+.stage-me .floor{position:absolute;left:10%;right:10%;bottom:-2%;height:22%;border-radius:50%;background:radial-gradient(closest-side,rgba(61,107,255,.35),transparent);filter:blur(18px);z-index:1}
+.stage-me .chip{position:absolute;z-index:3;font-family:"IBM Plex Mono",monospace;font-size:11.5px;padding:8px 12px;border-radius:999px;background:rgba(15,17,24,.85);border:1px solid rgba(255,255,255,.14);color:#fff;backdrop-filter:blur(8px);box-shadow:0 20px 40px rgba(0,0,0,.5);animation:float 7s ease-in-out infinite}
+.stage-me .chip.ai{background:var(--fg);color:#07080c;border-color:var(--fg)}
+.stage-me .chip:nth-child(odd){animation-duration:9s;animation-delay:-3s}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+.stage-me .grain{border-radius:30px}
+.foot{max-width:1240px;margin:0 auto;padding:22px 32px 40px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-family:"IBM Plex Mono",monospace;font-size:11.5px;color:var(--mut);direction:ltr;border-top:1px solid var(--line)}
+@media (max-width:900px){.about{grid-template-columns:1fr;padding:50px 18px 70px}.stage-me{max-width:420px}}
+@media (prefers-reduced-motion:reduce){.stage-me .chip,.stage-me .light{animation:none}}
+
+/* ---------- project page ---------- */
+.proj{position:relative;padding-top:90px;overflow:clip}
+.proj .orb{position:absolute;inset-inline-end:-200px;top:-100px;width:900px;height:900px;border-radius:50%;background:radial-gradient(closest-side,var(--glow),transparent 70%);filter:blur(60px);pointer-events:none}
+.ph{max-width:1240px;margin:0 auto;padding:20px 32px 40px;position:relative}
+.crumbs{display:flex;justify-content:space-between;font-size:12px;color:var(--mut);letter-spacing:.1em}
+.crumbs a{text-decoration:none;color:#fff;padding:8px 14px;border:1px solid var(--line);border-radius:999px;transition:.2s;font-family:"Heebo",sans-serif;letter-spacing:0;font-size:13px}
+.crumbs a:hover{background:rgba(255,255,255,.08)}
+.ph h1{font-family:"Syne",sans-serif;font-weight:800;font-size:clamp(52px,9vw,140px);letter-spacing:-.045em;line-height:.92;margin:36px 0 18px;direction:ltr;text-align:start}
+.ph .tag{font-size:clamp(18px,2vw,24px);line-height:1.55;color:#d5d8e4;max-width:48ch;margin:0 0 34px;font-weight:300}
+.meta{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;padding:22px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);font-size:14.5px;color:#dfe2ee}
+.meta .k{display:block;margin-bottom:8px;color:var(--mut)}
+.pts{list-style:none;padding:0;margin:40px 0 0;display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.pts li{display:flex;gap:14px;align-items:flex-start;padding:22px;border-radius:18px;background:rgba(255,255,255,.03);box-shadow:0 0 0 1px var(--line)}
+.pts li i{flex:none;width:28px;height:28px;border-radius:50%;background:var(--c);color:#07080c;display:grid;place-items:center;font-size:12px;font-style:normal;font-weight:500;box-shadow:0 0 22px var(--glow)}
+.pts li b{display:block;font-weight:500;color:#fff;margin-bottom:6px;font-size:16px}
+.pts li p{margin:0;color:#c9ccda;font-size:15px;line-height:1.65;font-weight:300}
+@media (max-width:900px){.meta{grid-template-columns:1fr 1fr}.pts{grid-template-columns:1fr}}
+
+.sec{max-width:1240px;margin:0 auto;padding:50px 32px 20px}
+.sec .hd{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap;margin-bottom:22px}
+.sec .hd h3{font-size:clamp(28px,3.4vw,44px);letter-spacing:-.02em;margin:8px 0 0;font-weight:700}
+.sec .hd p{color:var(--mut);margin:0;max-width:48ch;font-weight:300;font-size:15px}
+
+/* ---------- viewer (tabs + arrows + one frame) ---------- */
+.viewer{outline:none;border-radius:20px}
+.viewer:focus-visible{box-shadow:0 0 0 2px var(--c)}
+.vtabs{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;padding:2px 2px 10px}
+.vtabs::-webkit-scrollbar{display:none}
+.vt{flex:none;font-size:13px;padding:8px 14px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.03);color:#c9ccda;transition:.2s;white-space:nowrap}
+.vt:hover{background:rgba(255,255,255,.08);color:#fff}
+.vt.cur{background:var(--c);color:#07080c;border-color:var(--c);font-weight:500}
+.vctl{display:flex;align-items:center;gap:8px;margin:2px 0 12px;font-size:14px}
+.vctl .prev,.vctl .next,.deck .ctl .prev,.deck .ctl .next{width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:rgba(255,255,255,.04);color:#fff;font-size:22px;line-height:1;transition:.2s;display:grid;place-items:center;padding:0 0 3px}
+.vctl .prev:hover,.vctl .next:hover,.deck .ctl .prev:hover,.deck .ctl .next:hover{background:var(--c);color:#07080c;border-color:var(--c)}
+.vctl .cnt,.deck .cnt{font-size:12px;color:var(--mut);min-width:56px;text-align:center}
+.vctl .cnt b,.deck .cnt b{color:#fff;font-weight:500}
+.vctl .lbl{font-weight:500;color:#fff}
+.vctl .vl{display:none}.vctl .vl.cur{display:inline}
+.open{margin-inline-start:auto;font-size:12.5px;padding:8px 14px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.03);color:#dfe2ee;transition:.2s;font-family:"Heebo",sans-serif}
+.open:hover{background:var(--c);color:#07080c;border-color:var(--c)}
+.brw{border-radius:14px;background:#0f1118;box-shadow:0 50px 120px rgba(0,0,0,.6),0 0 0 1px rgba(255,255,255,.12);overflow:hidden;position:relative;direction:ltr}
+.viewer .brw .bar{height:36px;display:flex;align-items:center;gap:7px;padding:0 14px;background:#161923;border-bottom:1px solid var(--line)}
+.viewer .brw .bar i{width:11px;height:11px;border-radius:50%;background:#333848}
+.viewer .brw .bar i:nth-child(1){background:#ff5f57}.viewer .brw .bar i:nth-child(2){background:#febc2e}.viewer .brw .bar i:nth-child(3){background:#28c840}
+.viewer .brw .bar span{margin-left:14px;flex:1;height:20px;border-radius:6px;background:#0f1118}
+.viewer .vp{max-height:min(78vh,760px);overflow-y:auto;scrollbar-width:thin;scrollbar-color:#3a3d4c transparent;cursor:zoom-in;background:#fff}
+.viewer .vp img{width:100%;display:none}
+.viewer .vp img.cur{display:block;animation:fadein .35s}
+@keyframes fadein{from{opacity:0}to{opacity:1}}
+.viewer .hint{position:absolute;right:16px;bottom:14px;font-size:11px;background:rgba(7,8,12,.78);padding:6px 10px;border-radius:6px;color:#dfe2ee;backdrop-filter:blur(6px);pointer-events:none;font-family:"Heebo",sans-serif;opacity:.9;transition:opacity .3s}
+html[dir="rtl"] .viewer .hint{direction:rtl}
+.viewer .brw:hover .hint{opacity:0}
+.viewer .brw.ux{background:#15161e}.viewer .brw.ux .vp{background:#f4f4f4}
+/* phone / tablet stages */
+.viewer .stage{position:relative;padding:36px 20px;border-radius:24px;background:radial-gradient(60% 80% at 50% 100%,var(--glow),transparent 70%),linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.01));box-shadow:0 0 0 1px var(--line);display:grid;place-items:center;direction:ltr}
+.phone{width:min(340px,80vw);aspect-ratio:9/19.3;border-radius:38px;background:#000;box-shadow:0 40px 100px rgba(0,0,0,.7),0 0 0 1px rgba(255,255,255,.14),inset 0 0 0 7px #111;overflow:hidden;position:relative}
+.phone::before{content:"";position:absolute;top:13px;left:50%;transform:translateX(-50%);width:34%;height:22px;border-radius:12px;background:#000;z-index:2}
+.phone .vp{position:absolute;inset:7px;border-radius:31px;overflow-y:auto;background:#fff;scrollbar-width:none;cursor:zoom-in;max-height:none}
+.phone .vp::-webkit-scrollbar{display:none}
+.tab{width:min(760px,100%);aspect-ratio:4/3;border-radius:22px;background:#000;box-shadow:0 40px 100px rgba(0,0,0,.7),0 0 0 1px rgba(255,255,255,.14),inset 0 0 0 9px #111;overflow:hidden;position:relative}
+.tab .vp{position:absolute;inset:9px;border-radius:14px;overflow-y:auto;background:#fff;scrollbar-width:thin;scrollbar-color:#3a3d4c transparent;cursor:zoom-in;max-height:none}
+
+html[dir="rtl"] .vctl{direction:ltr}
+.vctl .lbl{display:none!important}
+section.sec.tab,.viewer.tab{width:auto;aspect-ratio:auto;background:transparent;box-shadow:none;overflow:visible;position:static}
+section.sec.tab{border-radius:0}
+.viewer.tab{border-radius:20px}
+.about>div:first-child{text-align:center}
+.about>div:first-child p{margin-inline:auto}
+.about h2{white-space:nowrap;text-align:center!important;font-size:clamp(28px,3.3vw,48px)!important}
+.about .tools{justify-content:center}
+.crow{display:flex;gap:10px;justify-content:center;align-items:center;flex-wrap:wrap;margin-top:26px}
+.crow .mail{margin-top:0!important}
+.cbtn{display:inline-flex;align-items:center;gap:8px;padding:14px 22px;border-radius:999px;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.05);color:#fff;text-decoration:none;font-size:15px;font-weight:500;transition:.2s}
+.cbtn:hover{background:rgba(255,255,255,.12);transform:translateY(-1px)}
+.cbtn{direction:ltr}
+.cbtn.wa{width:52px;height:52px;padding:0;justify-content:center;background:#25D366;border-color:#25D366}
+.cbtn.wa:hover{background:#20bd5a}
+.cbtn.cv{background:#F5C8D8;color:#07080c;border-color:#F5C8D8}
+.cbtn.cv:hover{background:#f9d9e5}
+html[lang="en"] .cv-he{display:none}
+html:not([lang="en"]) .cv-en{display:none}
+.crow{margin-top:34px!important;padding-top:24px;border-top:1px solid var(--line);gap:0!important;row-gap:10px!important}
+.crow a,.crow a.mail,.crow .cbtn{display:inline-flex;align-items:center;gap:8px;padding:4px 16px!important;margin:0!important;background:none!important;border:0!important;border-radius:0!important;width:auto!important;height:auto!important;color:#c9ccda!important;font-size:14.5px;font-weight:400;text-decoration:none;transform:none!important;transition:color .2s;direction:ltr}
+#about .crow a+a{border-inline-start:1px solid rgba(255,255,255,.16)!important}
+.crow a:hover{color:#fff!important}
+.crow a:hover span{text-decoration:underline;text-decoration-color:#F5C8D8;text-underline-offset:5px}
+.crow a.cv{color:#F5C8D8!important;font-weight:500}
+/* deck */
+html[dir="rtl"] .sec.deck>.hd{direction:rtl}
+.deck{position:relative;direction:ltr;outline:none;border-radius:16px}
+.deck:focus-visible{box-shadow:0 0 0 2px var(--c)}
+.deck .track{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding:6px 0 10px;scroll-behavior:smooth}
+.deck .track::-webkit-scrollbar{display:none}
+.deck .slide{flex:none;width:100%;scroll-snap-align:center;border-radius:14px;overflow:hidden;box-shadow:0 40px 100px rgba(0,0,0,.6),0 0 0 1px rgba(255,255,255,.12);background:#0f1118;cursor:zoom-in}
+.deck .slide img{width:100%;aspect-ratio:16/9;object-fit:cover}
+.deck .ctl{display:flex;align-items:center;gap:8px;margin:14px 0 12px;direction:inherit}
+html[dir="rtl"] .deck .ctl{direction:ltr}
+.deck .thumbs{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;padding-bottom:6px}
+.deck .thumbs::-webkit-scrollbar{display:none}
+.deck .th{flex:none;width:96px;aspect-ratio:16/9;border-radius:6px;overflow:hidden;border:2px solid transparent;padding:0;background:#0f1118;opacity:.55;transition:.2s}
+.deck .th img{width:100%;height:100%;object-fit:cover}
+.deck .th.cur{opacity:1;border-color:var(--c)}
+.deck .th:hover{opacity:1}
+
+/* extras */
+.extras{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.fx{margin:0;border-radius:14px;overflow:hidden;background:#15161e;box-shadow:0 0 0 1px var(--line);position:relative;cursor:zoom-in}
+.fx img{width:100%;height:100%;object-fit:contain;max-height:520px;padding:18px}
+.fx figcaption{position:absolute;inset-inline-start:12px;bottom:10px;font-size:12px;background:rgba(7,8,12,.8);padding:5px 10px;border-radius:6px;backdrop-filter:blur(6px)}
+@media (max-width:800px){.extras{grid-template-columns:1fr 1fr}}
+
+.stats{max-width:1240px;margin:50px auto 0;padding:30px 32px 0;display:grid;grid-template-columns:repeat(4,1fr);gap:18px;border-top:1px solid var(--line)}
+.stats b{display:block;font-size:44px;font-weight:800;letter-spacing:-.03em;text-align:start}
+.stats small{color:var(--mut);font-size:13.5px;display:block;margin-top:6px}
+@media (max-width:700px){.stats{grid-template-columns:1fr 1fr}}
+.nextp{max-width:1240px;margin:60px auto 0;padding:60px 32px 90px;display:flex;align-items:center;gap:26px;flex-wrap:wrap;text-decoration:none;position:relative;isolation:isolate;border-top:1px solid var(--line)}
+.nextp::before{content:"";position:absolute;inset:0;background:radial-gradient(50% 80% at 50% 100%,var(--glow),transparent 70%);opacity:.5;z-index:-1;transition:opacity .4s}
+.nextp:hover::before{opacity:1}
+.nextp .k{width:100%}
+.nextp .nm{font-size:clamp(44px,8vw,120px);font-weight:800;letter-spacing:-.045em;line-height:1}
+.nextp .arr{font-family:"Syne",sans-serif;font-size:clamp(44px,8vw,120px);font-weight:800;color:var(--c);transition:transform .3s;display:inline-block;direction:ltr}
+html[dir="rtl"] .nextp .arr{transform:scaleX(-1)}
+.nextp:hover .arr{transform:translateX(14px)}
+html[dir="rtl"] .nextp:hover .arr{transform:scaleX(-1) translateX(14px)}
+
+/* ---------- lightbox ---------- */
+.lb{position:fixed;inset:0;z-index:100;background:rgba(5,6,10,.94);backdrop-filter:blur(16px);display:none;overflow-y:auto;overscroll-behavior:contain;direction:ltr}
+.lb.on{display:block}
+.lb .top{position:sticky;top:0;z-index:2;display:flex;align-items:center;gap:12px;padding:14px 18px;background:linear-gradient(rgba(5,6,10,.9),rgba(5,6,10,0))}
+.lb .top .t{font-size:14px;color:#fff;font-weight:500}
+.lb .top .n{font-size:12px;color:var(--mut)}
+.lb .top button{width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:rgba(255,255,255,.06);color:#fff;font-size:20px;display:grid;place-items:center;padding:0 0 3px}
+.lb .top button:hover{background:#fff;color:#07080c}
+.lb .top .x{margin-left:auto;font-size:16px;padding:0}
+.lb .body{padding:0 24px 60px;display:grid;place-items:start center}
+.lb .body img{max-width:min(1400px,100%);border-radius:10px;box-shadow:0 40px 120px rgba(0,0,0,.8);animation:pop .3s cubic-bezier(.2,.8,.2,1)}
+.lb .body img.ph{max-width:460px}
+.lb .body img.cvimg{max-width:min(900px,100%);background:#fff}
+.lb .body img.sl{max-width:min(1500px,100%)}
+@keyframes pop{from{transform:scale(.97);opacity:0}to{transform:none;opacity:1}}
+
+/* reveal */
+.rv{opacity:.001;transform:translateY(26px);transition:opacity .7s,transform .7s cubic-bezier(.2,.8,.2,1)}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}}
+</style>
+
+<div class="prog" id="prog"></div>
+<nav class="nav"><a class="logo" href="#/">Meshi<i>.</i></a><div class="links"><a href="#/#work">Work</a><a href="#/#about">About</a><span class="lang"><button data-lang="he">עב</button><button data-lang="en">EN</button></span></div></nav>
+
+<!-- ================= HOME ================= -->
+<main id="home">
+  <section class="hero">
+    <div class="cam"><div class="plane" id="plane"><div class="flow" id="flow"></div></div></div>
+    <div class="fade"></div><div class="grain"></div>
+    <div class="hud"><div class="box">
+      <h1>Meshi<br><span>Designer</span></h1>
+      <p><span class="t" data-he="מעצבת UX/UI. אני לוקחת מוצר מהשאלה הראשונה במחקר ועד המסך האחרון, בדסקטופ, בטאבלט ובמובייל." data-en="UX/UI designer. I take products from the first research question to the last screen, on desktop, tablet and mobile.">מעצבת UX/UI. אני לוקחת מוצר מהשאלה הראשונה במחקר ועד המסך האחרון, בדסקטופ, בטאבלט ובמובייל.</span></p>
+      <a class="cta" href="#work"><i></i><span class="t" data-he="לעבודות" data-en="See the work">לעבודות</span></a>
+    </div></div>
+  </section>
+
+  <section class="work wrap" id="work">
+    <div class="hd"><div><h2>Five products.</h2></div></div>
+    <a class="card" href="#/nef" style="--c:#F70102;--c2:#5A1B2E;--glow:rgba(247,1,2,.25)">
+  <div class="txt">
+    <div class="num mono">01</div>
+    <h2 class="syne">NEF Wine Bar</h2>
+    <p class="sub mono">Brand system · web · print</p>
+    <p class="tag"><span class="t" data-he="WINE NOT?‎ הוא בר יין פריזאי. בניתי לו ספר מותג, חמישה מסכי UI וערכת שיווק שלמה, מסטורי באינסטגרם ועד שלט חוצות." data-en="WINE NOT?‎ is a Parisian wine bar. I built its brand book, five UI screens and a full marketing kit, from Instagram stories to billboards.">WINE NOT?‎ הוא בר יין פריזאי. בניתי לו ספר מותג, חמישה מסכי UI וערכת שיווק שלמה, מסטורי באינסטגרם ועד שלט חוצות.</span></p>
+    <div class="chips"><span>UX/UI</span><span>Brand book</span><span>Web</span><span>Print</span><span>Social</span></div>
+    <span class="cta"><span class="t" data-he="לצפייה בפרויקט" data-en="View project">לצפייה בפרויקט</span> <i>→</i></span>
+  </div>
+  <div class="vis">
+    <div class="brw"><div class="bar"><i></i><i></i><i></i></div><div class="vp"><img src="assets/img/d9a46c5a17.webp" alt=""></div></div>
+    <div class="sl2"><img src="assets/img/5a4e81af8f.webp" alt=""></div>
+  </div>
+</a><a class="card flip" href="#/eunye" style="--c:#E97A4B;--c2:#735C59;--glow:rgba(233,122,75,.32)">
+  <div class="txt">
+    <div class="num mono">02</div>
+    <h2 class="syne">EUNYE</h2>
+    <p class="sub mono">Korean skincare · e-commerce</p>
+    <p class="tag"><span class="t" data-he="אתר E-commerce למותגי טיפוח קוריאניים בישראל, לדסקטופ ולמובייל." data-en="An e-commerce site for Korean skincare brands in Israel, for desktop and mobile.">אתר E-commerce למותגי טיפוח קוריאניים בישראל, לדסקטופ ולמובייל.</span></p>
+    <div class="chips"><span>UX/UI</span><span>Web</span><span>Mobile</span><span>24 screens</span></div>
+    <span class="cta"><span class="t" data-he="לצפייה בפרויקט" data-en="View project">לצפייה בפרויקט</span> <i>→</i></span>
+  </div>
+  <div class="vis">
+    <div class="brw"><div class="bar"><i></i><i></i><i></i></div><div class="vp"><img src="assets/img/1255cd0d04.webp" alt=""></div></div>
+    <div class="ph2"><img src="assets/img/550e6abe47.webp" alt=""></div>
+  </div>
+</a><a class="card" href="#/ooni" style="--c:#ED4319;--c2:#F39005;--glow:rgba(237,67,25,.32)">
+  <div class="txt">
+    <div class="num mono">03</div>
+    <h2 class="syne">OONI</h2>
+    <p class="sub mono">Rebrand · e-commerce · campaign</p>
+    <p class="tag"><span class="t" data-he="מיתוג מחדש לטאבוני פיצה בישראל: אתר, דף מוצר עם תוספות שמתעדכנות בזמן אמת, וקמפיין &quot;אונימפיאדה 2025&quot;." data-en="A rebrand for pizza ovens in Israel: a website, a product page with add-ons that update in real time, and the &quot;Oonimpiada 2025&quot; campaign.">מיתוג מחדש לטאבוני פיצה בישראל: אתר, דף מוצר עם תוספות שמתעדכנות בזמן אמת, וקמפיין &quot;אונימפיאדה 2025&quot;.</span></p>
+    <div class="chips"><span>UX/UI</span><span>Rebrand</span><span>Web</span><span>Campaign</span></div>
+    <span class="cta"><span class="t" data-he="לצפייה בפרויקט" data-en="View project">לצפייה בפרויקט</span> <i>→</i></span>
+  </div>
+  <div class="vis">
+    <div class="brw"><div class="bar"><i></i><i></i><i></i></div><div class="vp"><img src="assets/img/a9db468964.webp" alt=""></div></div>
+    <div class="sl2"><img src="assets/img/a36a39f1ab.webp" alt=""></div>
+  </div>
+</a><a class="card flip" href="#/ezcamp" style="--c:#FFB56B;--c2:#FFE4BD;--glow:rgba(255,181,107,.28)">
+  <div class="txt">
+    <div class="num mono">04</div>
+    <h2 class="syne">EZcamp</h2>
+    <p class="sub mono">AI feature · 3 breakpoints</p>
+    <p class="tag"><span class="t" data-he="אתר E-commerce לציוד קמפינג עם פיצ&#x27;ר AI שמרכיב ערכה מותאמת אישית לפי המסלול. רספונסיבי לדסקטופ, טאבלט ומובייל." data-en="An e-commerce site for camping gear with an AI feature that builds a personalized kit for your route. Responsive across desktop, tablet and mobile.">אתר E-commerce לציוד קמפינג עם פיצ&#x27;ר AI שמרכיב ערכה מותאמת אישית לפי המסלול. רספונסיבי לדסקטופ, טאבלט ומובייל.</span></p>
+    <div class="chips"><span>UX/UI</span><span>AI feature</span><span>Web</span><span>Tablet</span><span>Mobile</span></div>
+    <span class="cta"><span class="t" data-he="לצפייה בפרויקט" data-en="View project">לצפייה בפרויקט</span> <i>→</i></span>
+  </div>
+  <div class="vis">
+    <div class="brw"><div class="bar"><i></i><i></i><i></i></div><div class="vp"><img src="assets/img/ed44c19d19.webp" alt=""></div></div>
+    <div class="ph2"><img src="assets/img/9e32ba85e4.webp" alt=""></div>
+  </div>
+</a><a class="card" href="#/mishmesh" style="--c:#DF7DB2;--c2:#AC855E;--glow:rgba(223,125,178,.3)">
+  <div class="txt">
+    <div class="num mono">05</div>
+    <h2 class="syne">MishMesh</h2>
+    <p class="sub mono">Kids fashion · brand book · UX → UI</p>
+    <p class="tag"><span class="t" data-he="אתר E-commerce לחנות בגדי ילדים שעוברת לאונליין. מיתוג מאפס, ספר מותג ותהליך UX/UI מלא, מהמחקר ועד המסכים הסופיים." data-en="An e-commerce site for a kids&#x27; clothing store moving online. Branding from scratch, a brand book and a full UX/UI process, from research to final screens.">אתר E-commerce לחנות בגדי ילדים שעוברת לאונליין. מיתוג מאפס, ספר מותג ותהליך UX/UI מלא, מהמחקר ועד המסכים הסופיים.</span></p>
+    <div class="chips"><span>UX/UI</span><span>Brand book</span><span>Web</span></div>
+    <span class="cta"><span class="t" data-he="לצפייה בפרויקט" data-en="View project">לצפייה בפרויקט</span> <i>→</i></span>
+  </div>
+  <div class="vis">
+    <div class="brw"><div class="bar"><i></i><i></i><i></i></div><div class="vp"><img src="assets/img/542c3ca21c.webp" alt=""></div></div>
+    <div class="sl2"><img src="assets/img/ad646037ca.webp" alt=""></div>
+  </div>
+</a>
+  </section>
+
+  <section class="about" id="about">
+    <div>
+      <span class="k">About</span>
+      <h2>Meshi Designer</h2>
+      <p><span class="t" data-he="מעצבת UX/UI שמובילה מוצרים דיגיטליים מהרעיון הראשון ועד המסך האחרון. אני משלבת מחקר משתמשים, ארכיטקטורת מידע ו-Design Systems כדי ליצור חוויות ברורות, אסתטיות ונוחות לשימוש בכל מכשיר. כלי AI הם חלק טבעי מתהליך העבודה שלי, ועוזרים לי להגיע לתוצאות מדויקות יותר, מהר יותר." data-en="UX/UI designer who leads digital products from the first idea to the final screen. I combine user research, information architecture and design systems to create experiences that are clear, beautiful and easy to use on every device. AI tools are a natural part of my workflow, helping me reach sharper results, faster.">מעצבת UX/UI שמובילה מוצרים דיגיטליים מהרעיון הראשון ועד המסך האחרון. אני משלבת מחקר משתמשים, ארכיטקטורת מידע ו-Design Systems כדי ליצור חוויות ברורות, אסתטיות ונוחות לשימוש בכל מכשיר. כלי AI הם חלק טבעי מתהליך העבודה שלי, ועוזרים לי להגיע לתוצאות מדויקות יותר, מהר יותר.</span></p>
+      <p><span class="t" data-he="שולטת ב-Figma לעומק (Auto Layout, Variables, Design Systems) ועובדת עם Adobe CC, כולל After Effects ו-Premiere. מחפשת משרת UX/UI מלאה בחברת מוצר." data-en="Deep Figma expertise (Auto Layout, Variables, Design Systems) and Adobe CC, including After Effects and Premiere. Looking for a full-time UX/UI role at a product company.">שולטת ב-Figma לעומק (Auto Layout, Variables, Design Systems) ועובדת עם Adobe CC, כולל After Effects ו-Premiere. מחפשת משרת UX/UI מלאה בחברת מוצר.</span></p>
+      <div class="tools"><span>Figma</span><span>Auto Layout</span><span>Variables</span><span>Prototyping</span><span>After Effects</span><span>Premiere</span><span class="ai">Claude</span><span class="ai">ChatGPT</span><span class="ai">Krea</span><span class="ai">Gemini</span><span class="ai">Kling</span><span class="ai">Magnific</span><span class="ai">Higgsfield</span></div>
+      <div class="crow"><a class="mail" id="contact" href="mailto:meshi316@gmail.com" target="_blank" rel="noopener" style="scroll-margin-top:45vh"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg><span>meshi316@gmail.com</span></a><a class="cbtn" href="tel:+972524442672" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span dir="ltr">052-444-2672</span></a><a class="cbtn wa" href="https://wa.me/972524442672" target="_blank" rel="noopener" aria-label="WhatsApp" title="WhatsApp"><svg viewBox="0 0 24 24" width="17" height="17" fill="#25D366" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg><span>WhatsApp</span></a><a class="cbtn cv cv-he" href="cv/Meshi-Naftalevich-CV-HE.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M8 13h8M8 17h5"/></svg><span>קורות חיים</span></a><a class="cbtn cv cv-en" href="cv/Meshi-Naftalevich-CV-EN.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M8 13h8M8 17h5"/></svg><span>CV</span></a></div>
+    </div>
+    <div class="stage-me">
+      <div class="ghost">UX<b>UI</b></div>
+      <div class="light"></div>
+      <div class="floor"></div>
+      <img class="me" src="assets/img/6f97866eaa.webp" alt="Meshi">
+      <span class="chip" style="left:2%;top:26%">Figma</span>
+      <span class="chip ai" style="right:0;top:34%">Claude</span>
+      <span class="chip" style="left:6%;top:58%">Design systems</span>
+      <span class="chip ai" style="right:4%;top:64%">ChatGPT</span>
+      <span class="chip" style="right:10%;top:14%">After Effects</span>
+      <div class="grain"></div>
+    </div>
+  </section>
+  <div class="foot"><span>© Meshi Designer</span></div>
+</main>
+
+<!-- ================= PROJECTS ================= -->
+<article class="proj" id="p-eunye" style="--c:#E97A4B;--c2:#735C59;--glow:rgba(233,122,75,.32)" hidden>
+<div class="orb"></div>
+<header class="ph">
+  <div class="crumbs mono"><a href="#/" class="back"><span class="t" data-he="← כל העבודות" data-en="← All work">← כל העבודות</span></a><span>02 / 05</span></div>
+  <h1 class="syne">EUNYE</h1>
+  <p class="tag"><span class="t" data-he="אתר E-commerce למותגי טיפוח קוריאניים בישראל, לדסקטופ ולמובייל." data-en="An e-commerce site for Korean skincare brands in Israel, for desktop and mobile.">אתר E-commerce למותגי טיפוח קוריאניים בישראל, לדסקטופ ולמובייל.</span></p>
+  
+  <ol class="pts"><li><i class="mono">1</i><div><b><span class="t" data-he="האתגר" data-en="The challenge">האתגר</span></b><p><span class="t" data-he="להביא מותגי טיפוח קוריאניים לקהל ישראלי. המטרה הייתה חוויית משתמש (UX) שמרגישה כמו סטודיו קוריאני מואר ולא כמו עוד חנות מקומית." data-en="Bring Korean skincare brands to Israeli shoppers. The goal was a user experience that feels like a bright Korean studio rather than another local shop.">להביא מותגי טיפוח קוריאניים לקהל ישראלי. המטרה הייתה חוויית משתמש (UX) שמרגישה כמו סטודיו קוריאני מואר ולא כמו עוד חנות מקומית.</span></p></div></li><li><i class="mono">2</i><div><b><span class="t" data-he="מה עשיתי" data-en="What I did">מה עשיתי</span></b><p><span class="t" data-he="יצרתי שפה ויזואלית רכה ונקייה שנותנת למוצרים לבלוט: גוונים חמים של מוקה ובז', וצבע כתום אחד שמראה ללקוח בדיוק איפה ללחוץ. כל קומפוננטה נבנתה כחלק מ-Design System אחד, כך שהחוויה עקבית מהעמוד הראשון ועד התשלום." data-en="I created a soft, clean visual language that lets the products stand out: warm mocha and beige tones, with a single orange that shows the customer exactly where to click. Every component was built as part of one design system, so the experience stays consistent from the first page to checkout.">יצרתי שפה ויזואלית רכה ונקייה שנותנת למוצרים לבלוט: גוונים חמים של מוקה ובז', וצבע כתום אחד שמראה ללקוח בדיוק איפה ללחוץ. כל קומפוננטה נבנתה כחלק מ-Design System אחד, כך שהחוויה עקבית מהעמוד הראשון ועד התשלום.</span></p></div></li><li><i class="mono">3</i><div><b><span class="t" data-he="התוצאה" data-en="The result">התוצאה</span></b><p><span class="t" data-he="חוויית משתמש שלמה ורציפה, מהכניסה לאתר ועד מייל החשבונית. חשבתי גם על ה-Edge Cases, כמו שגיאה בתשלום או חיפוש בלי תוצאות, כדי שהלקוח אף פעם לא ירגיש תקוע. הכל מותאם לדסקטופ ולמובייל." data-en="A complete, seamless user experience, from landing on the site to the invoice email. I also designed for the edge cases, like a payment error or a search with no results, so the customer never feels stuck. Everything is adapted for desktop and mobile.">חוויית משתמש שלמה ורציפה, מהכניסה לאתר ועד מייל החשבונית. חשבתי גם על ה-Edge Cases, כמו שגיאה בתשלום או חיפוש בלי תוצאות, כדי שהלקוח אף פעם לא ירגיש תקוע. הכל מותאם לדסקטופ ולמובייל.</span></p></div></li></ol>
+</header>
+<section class="sec web"><div class="hd"><div><h3 class="syne" style="font-weight:800;letter-spacing:-.03em">Web</h3></div></div><div class="viewer web" data-g="eunye-web" data-n="8" tabindex="0">
+  <div class="vtabs"><button class="vt cur" data-i="0"><span class="t" data-he="דף הבית" data-en="Home">דף הבית</span></button><button class="vt" data-i="1"><span class="t" data-he="קטגוריה: כל המוצרים" data-en="Category: all products">קטגוריה: כל המוצרים</span></button><button class="vt" data-i="2"><span class="t" data-he="קטגוריה: לא נמצאו תוצאות" data-en="Category: no results">קטגוריה: לא נמצאו תוצאות</span></button><button class="vt" data-i="3"><span class="t" data-he="עמוד מוצר" data-en="Product page">עמוד מוצר</span></button><button class="vt" data-i="4"><span class="t" data-he="סל קניות" data-en="Cart">סל קניות</span></button><button class="vt" data-i="5"><span class="t" data-he="תשלום, עם הודעות שגיאה" data-en="Payment, with error messages">תשלום, עם הודעות שגיאה</span></button><button class="vt" data-i="6"><span class="t" data-he="אישור הזמנה" data-en="Order confirmation">אישור הזמנה</span></button><button class="vt" data-i="7"><span class="t" data-he="הרשימה שלי" data-en="Wishlist">הרשימה שלי</span></button></div>
+  <div class="vctl">
+    <button class="prev" aria-label="prev">‹</button><span class="cnt mono"><b>1</b> / 8</span><button class="next" aria-label="next">›</button>
+    <span class="lbl"><span class="vl cur" data-i="0"><span class="t" data-he="דף הבית" data-en="Home">דף הבית</span></span><span class="vl" data-i="1"><span class="t" data-he="קטגוריה: כל המוצרים" data-en="Category: all products">קטגוריה: כל המוצרים</span></span><span class="vl" data-i="2"><span class="t" data-he="קטגוריה: לא נמצאו תוצאות" data-en="Category: no results">קטגוריה: לא נמצאו תוצאות</span></span><span class="vl" data-i="3"><span class="t" data-he="עמוד מוצר" data-en="Product page">עמוד מוצר</span></span><span class="vl" data-i="4"><span class="t" data-he="סל קניות" data-en="Cart">סל קניות</span></span><span class="vl" data-i="5"><span class="t" data-he="תשלום, עם הודעות שגיאה" data-en="Payment, with error messages">תשלום, עם הודעות שגיאה</span></span><span class="vl" data-i="6"><span class="t" data-he="אישור הזמנה" data-en="Order confirmation">אישור הזמנה</span></span><span class="vl" data-i="7"><span class="t" data-he="הרשימה שלי" data-en="Wishlist">הרשימה שלי</span></span></span>
+    <button class="open" data-open-cur="eunye-web"><span class="t" data-he="פתח בגדול ⤢" data-en="Open large ⤢">פתח בגדול ⤢</span></button>
+  </div>
+  <div class="brw"><div class="bar"><i></i><i></i><i></i><span></span></div><div class="vp"><img src="assets/img/3625b5cf15.webp" alt="דף הבית" data-i="0" class="pg cur" loading="lazy" data-open="eunye-web:0"><img src="assets/img/ba383e9efa.webp" alt="קטגוריה: כל המוצרים" data-i="1" class="pg" loading="lazy" data-open="eunye-web:1"><img src="assets/img/bd8fa6b66d.webp" alt="קטגוריה: לא נמצאו תוצאות" data-i="2" class="pg" loading="lazy" data-open="eunye-web:2"><img src="assets/img/5d2bffc3cd.webp" alt="עמוד מוצר" data-i="3" class="pg" loading="lazy" data-open="eunye-web:3"><img src="assets/img/d74db8faf3.webp" alt="סל קניות" data-i="4" class="pg" loading="lazy" data-open="eunye-web:4"><img src="assets/img/c140484d0b.webp" alt="תשלום, עם הודעות שגיאה" data-i="5" class="pg" loading="lazy" data-open="eunye-web:5"><img src="assets/img/028b6a7658.webp" alt="אישור הזמנה" data-i="6" class="pg" loading="lazy" data-open="eunye-web:6"><img src="assets/img/7c4a6f939a.webp" alt="הרשימה שלי" data-i="7" class="pg" loading="lazy" data-open="eunye-web:7"></div></div>
+</div></section><section class="sec mob"><div class="hd"><div><h3 class="syne" style="font-weight:800;letter-spacing:-.03em">Mobile</h3></div></div><div class="viewer mob" data-g="eunye-mob" data-n="7" tabindex="0">
+  <div class="vtabs"><button class="vt cur" data-i="0"><span class="t" data-he="דף הבית" data-en="Home">דף הבית</span></button><button class="vt" data-i="1"><span class="t" data-he="קטגוריה" data-en="Category">קטגוריה</span></button><button class="vt" data-i="2"><span class="t" data-he="מוצר" data-en="Product">מוצר</span></button><button class="vt" data-i="3"><span class="t" data-he="סל" data-en="Cart">סל</span></button><button class="vt" data-i="4"><span class="t" data-he="תשלום" data-en="Payment">תשלום</span></button><button class="vt" data-i="5"><span class="t" data-he="אישור" data-en="Confirmation">אישור</span></button><button class="vt" data-i="6"><span class="t" data-he="הרשימה שלי" data-en="Wishlist">הרשימה שלי</span></button></div>
+  <div class="vctl">
+    <button class="prev" aria-label="prev">‹</button><span class="cnt mono"><b>1</b> / 7</span><button class="next" aria-label="next">›</button>
+    <span class="lbl"><span class="vl cur" data-i="0"><span class="t" data-he="דף הבית" data-en="Home">דף הבית</span></span><span class="vl" data-i="1"><span class="t" data-he="קטגוריה" data-en="Category">קטגוריה</span></span><span class="vl" data-i="2"><span class="t" data-he="מוצר" data-en="Product">מוצר</span></span><span class="vl" data-i="3"><span class="t" data-he="סל" data-en="Cart">סל</span></span><span class="vl" data-i="4"><span class="t" data-he="תשלום" data-en="Payment">תשלום</span></span><span class="vl" data-i="5"><span class="t" data-he="אישור" data-en="Confirmation">אישור</span></span><span class="vl" data-i="6"><span class="t" data-he="הרשימה שלי" data-en="Wishlist">הרשימה שלי</span></span></span>
+    <button class="open" data-open-cur="eunye-mob"><span class="t" data-he="פתח בגדול ⤢" data-en="Open large ⤢">פתח בגדול ⤢</span></button>
+  </div>
+  <div class="stage"><div class="phone"><div class="vp"><img src="assets/img/e6d55153c8.webp" alt="דף הבית" data-i="0" class="pg cur" loading="lazy" data-open="eunye-mob:0"><img src="assets/img/905d3727cd.webp" alt="קטגוריה" data-i="1" class="pg" loading="lazy" data-open="eunye-mob:1"><img src="assets/img/a71448ab74.webp" alt="מוצר" data-i="2" class="pg" loading="lazy" data-open="eunye-mob:2"><img src="assets/img/09f750b152.webp" alt="סל" data-i="3" class="pg" loading="lazy" data-open="eunye-mob:3"><img src="assets/img/312796c3dd.webp" alt="תשלום" data-i="4" class="pg" loading="lazy" data-open="eunye-mob:4"><img src="assets/img/6a58316997.webp" alt="אישור" data-i="5" class="pg" loading="lazy" data-open="eunye-mob:5"><img src="assets/img/d9cadef00e.webp" alt="הרשימה שלי" data-i="6" class="pg" loading="lazy" data-open="eunye-mob:6"></div></div></div>
+</div></section><section class="sec ex"><div class="hd"><div><div class="k mono">Details · States</div><h3><span class="t" data-he="הפרטים הקטנים." data-en="The small details.">הפרטים הקטנים.</span></h3></div><p><span class="t" data-he="מיילים, פאנלים ו-Edge Cases. כאן מוצר מוכיח את עצמו." data-en="Emails, panels and edge cases. This is where a product proves itself.">מיילים, פאנלים ו-Edge Cases. כאן מוצר מוכיח את עצמו.</span></p></div><div class="extras"><figure class="fx" data-g="eunye-ex" data-i="0"><img src="assets/img/f5914efc1d.webp" alt="מייל חשבונית" loading="lazy" data-open="eunye-ex:0"><figcaption><span class="t" data-he="מייל חשבונית" data-en="Invoice email">מייל חשבונית</span></figcaption></figure><figure class="fx" data-g="eunye-ex" data-i="1"><img src="assets/img/3bff4c809d.webp" alt="פאנל סינון בדסקטופ" loading="lazy" data-open="eunye-ex:1"><figcaption><span class="t" data-he="פאנל סינון בדסקטופ" data-en="Filter panel, desktop">פאנל סינון בדסקטופ</span></figcaption></figure><figure class="fx" data-g="eunye-ex" data-i="2"><img src="assets/img/cddb3e2088.webp" alt="פאנל סינון במובייל" loading="lazy" data-open="eunye-ex:2"><figcaption><span class="t" data-he="פאנל סינון במובייל" data-en="Filter panel, mobile">פאנל סינון במובייל</span></figcaption></figure></div></section>
+
+<a class="nextp" href="#/ooni" style="--c:#ED4319;--glow:rgba(237,67,25,.32)"><span class="k mono"><span class="t" data-he="הפרויקט הבא" data-en="Next project">הפרויקט הבא</span></span><span class="syne nm">OONI</span><span class="arr">→</span></a>
+</article><article class="proj" id="p-ooni" style="--c:#ED4319;--c2:#F39005;--glow:rgba(237,67,25,.32)" hidden>
+<div class="orb"></div>
+<header class="ph">
+  <div class="crumbs mono"><a href="#/" class="back"><span class="t" data-he="← כל העבודות" data-en="← All work">← כל העבודות</span></a><span>03 / 05</span></div>
+  <h1 class="syne">OONI</h1>
+  <p class="tag"><span class="t" data-he="מיתוג מחדש לטאבוני פיצה בישראל: אתר, דף מוצר עם תוספות שמתעדכנות בזמן אמת, וקמפיין &quot;אונימפיאדה 2025&quot;." data-en="A rebrand for pizza ovens in Israel: a website, a product page with add-ons that update in real time, and the &quot;Oonimpiada 2025&quot; campaign.">מיתוג מחדש לטאבוני פיצה בישראל: אתר, דף מוצר עם תוספות שמתעדכנות בזמן אמת, וקמפיין &quot;אונימפיאדה 2025&quot;.</span></p>
+  
+  <ol class="pts"><li><i class="mono">1</i><div><b><span class="t" data-he="האתגר" data-en="The challenge">האתגר</span></b><p><span class="t" data-he="מותג טאבונים בינלאומי שנכנס לישראל. הוא היה צריך שפה ויזואלית חדה ויוקרתית שתמכור באונליין מוצר שעולה אלפי שקלים." data-en="An international pizza-oven brand entering Israel. It needed a sharp, premium visual language that could sell a product costing thousands of shekels online.">מותג טאבונים בינלאומי שנכנס לישראל. הוא היה צריך שפה ויזואלית חדה ויוקרתית שתמכור באונליין מוצר שעולה אלפי שקלים.</span></p></div></li><li><i class="mono">2</i><div><b><span class="t" data-he="מה עשיתי" data-en="What I did">מה עשיתי</span></b><p><span class="t" data-he="מיתוג מחדש מלא: פלטת צבעים חדשה, לוגו OO בצורת אינסוף שממנו נגזר גם לוגו הקמפיין בהשראת הטבעות האולימפיות, ודף מוצר שבו כל תוספת מעדכנת את הסכום בזמן אמת." data-en="A full rebrand: a new color palette, an infinity-shaped OO logo that also became the campaign logo, inspired by the Olympic rings, and a product page where every add-on updates the total in real time.">מיתוג מחדש מלא: פלטת צבעים חדשה, לוגו OO בצורת אינסוף שממנו נגזר גם לוגו הקמפיין בהשראת הטבעות האולימפיות, ודף מוצר שבו כל תוספת מעדכנת את הסכום בזמן אמת.</span></p></div></li><li><i class="mono">3</i><div><b><span class="t" data-he="התוצאה" data-en="The result">התוצאה</span></b><p><span class="t" data-he="חוויית משתמש (UX) פשוטה ובטוחה למוצר יקר: הלקוח בונה את הטאבון שלו עם תוספות, רואה את המחיר מתעדכן ומשלים את התשלום בכמה צעדים ברורים. ובנוסף, דף נחיתה לקמפיין &quot;אונימפיאדה 2025&quot; עם ספירה לאחור והרשמה." data-en="A simple, reassuring user experience for a high-ticket product: customers build their oven with add-ons, watch the price update and complete checkout in a few clear steps. Plus a landing page for the &quot;Oonimpiada 2025&quot; campaign with a countdown and sign-up.">חוויית משתמש (UX) פשוטה ובטוחה למוצר יקר: הלקוח בונה את הטאבון שלו עם תוספות, רואה את המחיר מתעדכן ומשלים את התשלום בכמה צעדים ברורים. ובנוסף, דף נחיתה לקמפיין &quot;אונימפיאדה 2025&quot; עם ספירה לאחור והרשמה.</span></p></div></li></ol>
+</header>
+<section class="sec web"><div class="hd"><div><h3 class="syne" style="font-weight:800;letter-spacing:-.03em">Web</h3></div></div><div class="viewer web" data-g="ooni-web" data-n="6" tabindex="0">
+  <div class="vtabs"><button class="vt cur" data-i="0"><span class="t" data-he="דף הבית" data-en="Home">דף הבית</span></button><button class="vt" data-i="1"><span class="t" data-he="הטאבונים שלנו: קטגוריה" data-en="Our ovens: category">הטאבונים שלנו: קטגוריה</span></button><button class="vt" data-i="2"><span class="t" data-he="עמוד מוצר: Koda 16 עם תוספות" data-en="Product: Koda 16 with add-ons">עמוד מוצר: Koda 16 עם תוספות</span></button><button class="vt" data-i="3"><span class="t" data-he="סל קניות" data-en="Cart">סל קניות</span></button><button class="vt" data-i="4"><span class="t" data-he="פרטים אישיים ותשלום" data-en="Details and payment">פרטים אישיים ותשלום</span></button><button class="vt" data-i="5"><span class="t" data-he="אישור הזמנה" data-en="Order confirmation">אישור הזמנה</span></button></div>
+  <div class="vctl">
+    <button class="prev" aria-label="prev">‹</button><span class="cnt mono"><b>1</b> / 6</span><button class="next" aria-label="next">›</button>
+    <span class="lbl"><span class="vl cur" data-i="0"><span class="t" data-he="דף הבית" data-en="Home">דף הבית</span></span><span class="vl" data-i="1"><span class="t" data-he="הטאבונים שלנו: קטגוריה" data-en="Our ovens: category">הטאבונים שלנו: קטגוריה</span></span><span class="vl" data-i="2"><span class="t" data-he="עמוד מוצר: Koda 16 עם תוספות" data-en="Product: Koda 16 with add-ons">עמוד מוצר: Koda 16 עם תוספות</span></span><span class="vl" data-i="3"><span class="t" data-he="סל קניות" data-en="Cart">סל קניות</span></span><span class="vl" data-i="4"><span class="t" data-he="פרטים אישיים ותשלום" data-en="Details and payment">פרטים אישיים ותשלום</span></span><span class="vl" data-i="5"><span class="t" data-he="אישור הזמנה" data-en="Order confirmation">אישור הזמנה</span></span></span>
+    <button class="open" data-open-cur="ooni-web"><span class="t" data-he="פתח בגדול ⤢" data-en="Open large ⤢">פתח בגדול ⤢</span></button>
+  </div>
+  <div class="brw"><div class="bar"><i></i><i></i><i></i><span></span></div><div class="vp"><img src="assets/img/39cc9cae5a.webp" alt="דף הבית" data-i="0" class="pg cur" loading="lazy" data-open="ooni-web:0"><img src="assets/img/2204493116.webp" alt="הטאבונים שלנו: קטגוריה" data-i="1" class="pg" loading="lazy" data-open="ooni-web:1"><img src="assets/img/3bc3dca468.webp" alt="עמוד מוצר: Koda 16 עם תוספות" data-i="2" class="pg" loading="lazy" data-open="ooni-web:2"><img src="assets/img/8b6335cac3.webp" alt="סל קניות" data-i="3" class="pg" loading="lazy" data-open="ooni-web:3"><img src="assets/img/77735f563c.webp" alt="פרטים אישיים ותשלום" data-i="4" class="pg" loading="lazy" data-open="ooni-web:4"><img src="assets/img/6312622018.webp" alt="אישור הזמנה" data-i="5" class="pg" loading="lazy" data-open="ooni-web:5"></div></div>
+</div></section>
+
+<section class="sec web"><div class="hd"><div><h3><span class="t" data-he="דף נחיתה: אונימפיאדה 2025" data-en="Landing page: Oonimpiada 2025">דף נחיתה: אונימפיאדה 2025</span></h3></div></div><div class="viewer web" data-g="ooni-landing" data-n="1" tabindex="0">
+  <div class="vtabs" style="display:none"><button class="vt cur" data-i="0"><span class="t" data-he="דף נחיתה: אונימפיאדה 2025" data-en="Landing page: Oonimpiada 2025">דף נחיתה: אונימפיאדה 2025</span></button></div>
+  <div class="vctl">
+    <button class="prev" aria-label="prev" style="display:none">‹</button><span class="cnt mono" style="display:none"><b>1</b> / 1</span><button class="next" aria-label="next" style="display:none">›</button>
+    <span class="lbl" style="visibility:hidden"><span class="vl cur" data-i="0"><span class="t" data-he="דף נחיתה: אונימפיאדה 2025" data-en="Landing page: Oonimpiada 2025">דף נחיתה: אונימפיאדה 2025</span></span></span>
+    <button class="open" data-open-cur="ooni-landing"><span class="t" data-he="פתח בגדול ⤢" data-en="Open large ⤢">פתח בגדול ⤢</span></button>
+  </div>
+  <div class="brw"><div class="bar"><i></i><i></i><i></i><span></span></div><div class="vp"><img src="assets/img/457860de69.webp" alt="דף נחיתה: אונימפיאדה 2025" data-i="0" class="pg cur" loading="lazy" data-open="ooni-landing:0"></div></div>
+</div></section>
+
+<a class="nextp" href="#/ezcamp" style="--c:#FFB56B;--glow:rgba(255,181,107,.28)"><span class="k mono"><span class="t" data-he="הפרויקט הבא" data-en="Next project">הפרויקט הבא</span></span><span class="syne nm">EZcamp</span><span class="arr">→</span></a>
+</article><article class="proj" id="p-ezcamp" style="--c:#FFB56B;--c2:#FFE4BD;--glow:rgba(255,181,107,.28)" hidden>
+<div class="orb"></div>
+<header class="ph">
+  <div class="crumbs mono"><a href="#/" class="back"><span class="t" data-he="← כל העבודות" data-en="← All work">← כל העבודות</span></a><span>04 / 05</span></div>
+  <h1 class="syne">EZcamp</h1>
+  <p class="tag"><span class="t" data-he="אתר E-commerce לציוד קמפינג עם פיצ&#x27;ר AI שמרכיב ערכה מותאמת אישית לפי המסלול. רספונסיבי לדסקטופ, טאבלט ומובייל." data-en="An e-commerce site for camping gear with an AI feature that builds a personalized kit for your route. Responsive across desktop, tablet and mobile.">אתר E-commerce לציוד קמפינג עם פיצ&#x27;ר AI שמרכיב ערכה מותאמת אישית לפי המסלול. רספונסיבי לדסקטופ, טאבלט ומובייל.</span></p>
+  
+  <ol class="pts"><li><i class="mono">1</i><div><b><span class="t" data-he="האתגר" data-en="The challenge">האתגר</span></b><p><span class="t" data-he="קמפינג מרתיע מתחילים, כי לא ברור מה צריך לקחת. ראיתי כאן הזדמנות להפוך AI לפיצ&#x27;ר שבאמת עוזר למשתמש." data-en="Camping puts beginners off, because it&#x27;s hard to know what to bring. I saw a chance to make AI a feature that actually helps the user.">קמפינג מרתיע מתחילים, כי לא ברור מה צריך לקחת. ראיתי כאן הזדמנות להפוך AI לפיצ&#x27;ר שבאמת עוזר למשתמש.</span></p></div></li><li><i class="mono">2</i><div><b><span class="t" data-he="מה עשיתי" data-en="What I did">מה עשיתי</span></b><p><span class="t" data-he="עוזר בשם Smart Adventure Kit: בוחרים קטגוריה, מתארים את הטיול במילים או מעלים תמונה, ומסמנים רמת קושי ועונה. מצבי ה-Loading וה-Results בנויים כקומפוננטה, והערכה כולה נכנסת לסל ב-15% הנחה." data-en="An assistant called Smart Adventure Kit: pick a category, describe your trip or upload a photo, and tag the difficulty and season. Loading and results states are built as a component, and the whole kit goes into the cart at 15% off.">עוזר בשם Smart Adventure Kit: בוחרים קטגוריה, מתארים את הטיול במילים או מעלים תמונה, ומסמנים רמת קושי ועונה. מצבי ה-Loading וה-Results בנויים כקומפוננטה, והערכה כולה נכנסת לסל ב-15% הנחה.</span></p></div></li><li><i class="mono">3</i><div><b><span class="t" data-he="התוצאה" data-en="The result">התוצאה</span></b><p><span class="t" data-he="חוויית משתמש אחידה ונוחה בכל מכשיר, דסקטופ, טאבלט ומובייל, כשכל גרסה מותאמת לאופן שבו משתמשים בה. הכל בנוי על Design System מסודר, כך שהקבצים מוכנים להעברה לפיתוח." data-en="A consistent, comfortable user experience on every device, desktop, tablet and mobile, with each version adapted to how people actually use it. Everything is built on an organized design system, so the files are ready for developer handoff.">חוויית משתמש אחידה ונוחה בכל מכשיר, דסקטופ, טאבלט ומובייל, כשכל גרסה מותאמת לאופן שבו משתמשים בה. הכל בנוי על Design System מסודר, כך שהקבצים מוכנים להעברה לפיתוח.</span></p></div></li></ol>
+</header>
+<section class="sec web"><div class="hd"><div><h3 class="syne" style="font-weight:800;letter-spacing:-.03em">Web</h3></div></div><div class="viewer web" data-g="ezcamp-web" data-n="6" tabindex="0">
+  <div class="vtabs"><button class="vt cur" data-i="0"><span class="t" data-he="דף הבית" data-en="Home">דף הבית</span></button><button class="vt" data-i="1"><span class="t" data-he="Smart Adventure Kit: פיצ&#x27;ר ה-AI" data-en="Smart Adventure Kit: the AI feature">Smart Adventure Kit: פיצ&#x27;ר ה-AI</span></button><button class="vt" data-i="2"><span class="t" data-he="קטגוריה: Tents" data-en="Category: Tents">קטגוריה: Tents</span></button><button class="vt" data-i="3"><span class="t" data-he="עמוד מוצר: Explorer 3" data-en="Product: Explorer 3">עמוד מוצר: Explorer 3</span></button><button class="vt" data-i="4"><span class="t" data-he="סל" data-en="Cart">סל</span></button><button class="vt" data-i="5"><span class="t" data-he="תשלום" data-en="Payment">תשלום</span></button></div>
+  <div class="vctl">
+    <button class="prev" aria-label="prev">‹</button><span class="cnt mono"><b>1</b> / 6</span><button class="next" aria-label="next">›</button>
+    <span class="lbl"><span class="vl cur" data-i="0"><span class="t" data-he="דף הבית" data-en="Home">דף הבית</span></span><span class="vl" data-i="1"><span class="t" data-he="Smart Adventure Kit: פיצ&#x27;ר ה-AI" data-en="Smart Adventure Kit: the AI feature">Smart Adventure Kit: פיצ&#x27;ר ה-AI</span></span><span class="vl" data-i="2"><span class="t" data-he="קטגוריה: Tents" data-en="Category: Tents">קטגוריה: Tents</span></span><span class="vl" data-i="3"><span class="t" data-he="עמוד מוצר: Explorer 3" data-en="Product: Explorer 3">עמוד מוצר: Explorer 3</span></span><span class="vl" data-i="4"><span class="t" data-he="סל" data-en="Cart">סל</span></span><span class="vl" data-i="5"><span class="t" data-he="תשלום" data-en="Payment">תשלום</span></span></span>
+    <button class="open" data-open-cur="ezcamp-web"><span class="t" data-he="פתח בגדול ⤢" data-en="Open large ⤢">פתח בגדול ⤢</span></button>
+  </div>
+  <div class="brw"><div class="bar"><i></i><i></i><i></i><span></span></div><div class="vp"><img src="assets/img/3a8530cad0.webp" alt="דף הבית" data-i="0" class="pg cur" loading="lazy" data-open="ezcamp-web:0"><img src="assets/img/0c12ccf9ef.webp" alt="Smart Adventure Kit: פיצ&#x27;ר ה-AI" data-i="1" class="pg" loading="lazy" data-open="ezcamp-web:1"><img src="assets/img/86ab8306f5.webp" alt="קטגוריה: Tents" data-i="2" class="pg" loading="lazy" data-open="ezcamp-web:2"><img src="assets/img/97b68e22f2.webp" alt="עמוד מוצר: Explorer 3" data-i="3" class="pg" loading="lazy" data-open="ezcamp-web:3"><img src="assets/img/ac1dbe9081.webp" alt="סל" data-i="4" class="pg" loading="lazy" data-open="ezcamp-web:4"><img src="assets/img/bd270a6a7d.webp" alt="תשלום" data-i="5" class="pg" loading="lazy" data-open="ezcamp-web:5"></div></div>
+</div></section><section class="sec tab"><div class="hd"><div><h3 class="syne" style="font-weight:800;letter-spacing:-.03em">Tablet</h3></div><p><span class="t" data-he="גרסת הטאבלט קיבלה פריסה משלה, ולא דסקטופ מוקטן." data-en="The tablet version has a layout of its own, rather than a scaled-down desktop.">גרסת הטאבלט קיבלה פריסה משלה, ולא דסקטופ מוקטן.</span></p></div><div class="viewer tab" data-g="ezcamp-tab" data-n="5" tabindex="0">
+  <div class="vtabs"><button class="vt cur" data-i="0"><span class="t" data-he="דף הבית" data-en="Home">דף הבית</span></button><button class="vt" data-i="1"><span class="t" data-he="קטגוריה" data-en="Category">קטגוריה</span></button><button class="vt" data-i="2"><span class="t" data-he="מוצר" data-en="Product">מוצר</span></button><button class="vt" data-i="3"><span class="t" data-he="סל" data-en="Cart">סל</span></button><button class="vt" data-i="4"><span class="t" data-he="תשלום" data-en="Payment">תשלום</span></button></div>
+  <div class="vctl">
+    <button class="prev" aria-label="prev">‹</button><span class="cnt mono"><b>1</b> / 5</span><button class="next" aria-label="next">›</button>
+    <span class="lbl"><span class="vl cur" data-i="0"><span class="t" data-he="דף הבית" data-en="Home">דף הבית</span></span><span class="vl" data-i="1"><span class="t" data-he="קטגוריה" data-en="Category">קטגוריה</span></span><span class="vl" data-i="2"><span class="t" data-he="מוצר" data-en="Product">מוצר</span></span><span class="vl" data-i="3"><span class="t" data-he="סל" data-en="Cart">סל</span></span><span class="vl" data-i="4"><span class="t" data-he="תשלום" data-en="Payment">תשלום</span></span></span>
+    <button class="open" data-open-cur="ezcamp-tab"><span class="t" data-he="פתח בגדול ⤢" data-en="Open large ⤢">פתח בגדול ⤢</span></button>
+  </div>
+  <div class="stage"><div class="tab"><div class="vp"><img src="assets/img/5aa5ce9440.webp" alt="דף הבית" data-i="0" class="pg cur" loading="lazy" data-open="ezcamp-tab:0"><img src="assets/img/7dc3693e07.webp" alt="קטגוריה" data-i="1" class="pg" loading="lazy" data-open="ezcamp-tab:1"><img src="assets/img/2e416fd2ad.webp" alt="מוצר" data-i="2" class="pg" loading="lazy" data-open="ezcamp-tab:2"><img src="assets/img/254f942f4e.webp" alt="סל" data-i="3" class="pg" loading="lazy" data-open="ezcamp-tab:3"><img src="assets/img/f85da86420.webp" alt="תשלום" data-i="4" class="pg" loading="lazy" data-open="ezcamp-tab:4"></div></div></div>
+</div></section><section class="sec mob"><div class="hd"><div><h3 class="syne" style="font-weight:800;letter-spacing:-.03em">Mobile</h3></div></div><div class="viewer mob" data-g="ezcamp-mob" data-n="5" tabindex="0">
+  <div class="vtabs"><button class="vt cur" data-i="0"><span class="t" data-he="דף הבית" data-en="Home">דף הבית</span></button><button class="vt" data-i="1"><span class="t" data-he="קטגוריה" data-en="Category">קטגוריה</span></button><button class="vt" data-i="2"><span class="t" data-he="מוצר" data-en="Product">מוצר</span></button><button class="vt" data-i="3"><span class="t" data-he="סל" data-en="Cart">סל</span></button><button class="vt" data-i="4"><span class="t" data-he="תשלום" data-en="Payment">תשלום</span></button></div>
+  <div class="vctl">
+    <button class="prev" aria-label="prev">‹</button><span class="cnt mono"><b>1</b> / 5</span><button class="next" aria-label="next">›</button>
+    <span class="lbl"><span class="vl cur" data-i="0"><span class="t" data-he="דף הבית" data-en="Home">דף הבית</span></span><span class="vl" data-i="1"><span class="t" data-he="קטגוריה" data-en="Category">קטגוריה</span></span><span class="vl" data-i="2"><span class="t" data-he="מוצר" data-en="Product">מוצר</span></span><span class="vl" data-i="3"><span class="t" data-he="סל" data-en="Cart">סל</span></span><span class="vl" data-i="4"><span class="t" data-he="תשלום" data-en="Payment">תשלום</span></span></span>
+    <button class="open" data-open-cur="ezcamp-mob"><span class="t" data-he="פתח בגדול ⤢" data-en="Open large ⤢">פתח בגדול ⤢</span></button>
+  </div>
+  <div class="stage"><div class="phone"><div class="vp"><img src="assets/img/9196d698a4.webp" alt="דף הבית" data-i="0" class="pg cur" loading="lazy" data-open="ezcamp-mob:0"><img src="assets/img/32256f3f56.webp" alt="קטגוריה" data-i="1" class="pg" loading="lazy" data-open="ezcamp-mob:1"><img src="assets/img/ea163451c5.webp" alt="מוצר" data-i="2" class="pg" loading="lazy" data-open="ezcamp-mob:2"><img src="assets/img/fe577a4b44.webp" alt="סל" data-i="3" class="pg" loading="lazy" data-open="ezcamp-mob:3"><img src="assets/img/59acfa39d1.webp" alt="תשלום" data-i="4" class="pg" loading="lazy" data-open="ezcamp-mob:4"></div></div></div>
+</div></section>
+
+<a class="nextp" href="#/mishmesh" style="--c:#DF7DB2;--glow:rgba(223,125,178,.3)"><span class="k mono"><span class="t" data-he="הפרויקט הבא" data-en="Next project">הפרויקט הבא</span></span><span class="syne nm">MishMesh</span><span class="arr">→</span></a>
+</article><article class="proj" id="p-mishmesh" style="--c:#DF7DB2;--c2:#AC855E;--glow:rgba(223,125,178,.3)" hidden>
+<div class="orb"></div>
+<header class="ph">
+  <div class="crumbs mono"><a href="#/" class="back"><span class="t" data-he="← כל העבודות" data-en="← All work">← כל העבודות</span></a><span>05 / 05</span></div>
+  <h1 class="syne">MishMesh</h1>
+  <p class="tag"><span class="t" data-he="אתר E-commerce לחנות בגדי ילדים שעוברת לאונליין. מיתוג מאפס, ספר מותג ותהליך UX/UI מלא, מהמחקר ועד המסכים הסופיים." data-en="An e-commerce site for a kids&#x27; clothing store moving online. Branding from scratch, a brand book and a full UX/UI process, from research to final screens.">אתר E-commerce לחנות בגדי ילדים שעוברת לאונליין. מיתוג מאפס, ספר מותג ותהליך UX/UI מלא, מהמחקר ועד המסכים הסופיים.</span></p>
+  
+  <ol class="pts"><li><i class="mono">1</i><div><b><span class="t" data-he="האתגר" data-en="The challenge">האתגר</span></b><p><span class="t" data-he="אתר E-commerce לחנות בגדי ילדים שעוברת לאונליין. מיתוג מאפס ותהליך UX/UI מלא, הרבה מעבר ל&quot;מסכים יפים&quot;." data-en="An e-commerce site for a kids&#x27; clothing store moving online. Branding from scratch and a full UX/UI process that goes well beyond pretty screens.">אתר E-commerce לחנות בגדי ילדים שעוברת לאונליין. מיתוג מאפס ותהליך UX/UI מלא, הרבה מעבר ל&quot;מסכים יפים&quot;.</span></p></div></li><li><i class="mono">2</i><div><b><span class="t" data-he="מה עשיתי" data-en="What I did">מה עשיתי</span></b><p><span class="t" data-he="התחלתי במחקר, עברתי ל-Wireframes ולסקיצות, ורק אז ל-UI. לוגו MiShMeSh מצויר ביד, אייקון &quot;שלוש הקוביות&quot; שהפך למועדון הלקוחות, וספר מותג שלם עם כרטיסי ביקור, פוסטרים, שלטי חוצות וסטורים." data-en="I started with research, moved on to wireframes and sketches, and only then to UI. A hand-drawn MiShMeSh logo, a &quot;three dice&quot; icon that became the loyalty club, and a complete brand book with business cards, posters, billboards and stories.">התחלתי במחקר, עברתי ל-Wireframes ולסקיצות, ורק אז ל-UI. לוגו MiShMeSh מצויר ביד, אייקון &quot;שלוש הקוביות&quot; שהפך למועדון הלקוחות, וספר מותג שלם עם כרטיסי ביקור, פוסטרים, שלטי חוצות וסטורים.</span></p></div></li><li><i class="mono">3</i><div><b><span class="t" data-he="התוצאה" data-en="The result">התוצאה</span></b><p><span class="t" data-he="חנות בגדי הילדים קיבלה זהות מותגית שלמה ואתר שמרגיש כמו המותג: ידידותי ופשוט. הורים מוצאים בקלות את מה שהם מחפשים ומסיימים הזמנה במהירות, עם אפשרות לתשלום מהיר." data-en="The kids&#x27; clothing store got a complete brand identity and a website that feels like the brand: friendly and simple. Parents easily find what they&#x27;re looking for and complete their order quickly, with an express payment option.">חנות בגדי הילדים קיבלה זהות מותגית שלמה ואתר שמרגיש כמו המותג: ידידותי ופשוט. הורים מוצאים בקלות את מה שהם מחפשים ומסיימים הזמנה במהירות, עם אפשרות לתשלום מהיר.</span></p></div></li></ol>
+</header>
+<section class="sec web"><div class="hd"><div><h3 class="syne" style="font-weight:800;letter-spacing:-.03em">Web</h3></div></div><div class="viewer web" data-g="mishmesh-web" data-n="5" tabindex="0">
+  <div class="vtabs"><button class="vt cur" data-i="0"><span class="t" data-he="דף הבית" data-en="Home">דף הבית</span></button><button class="vt" data-i="1"><span class="t" data-he="קטגוריה: מכנסיים" data-en="Category: pants">קטגוריה: מכנסיים</span></button><button class="vt" data-i="2"><span class="t" data-he="עמוד מוצר" data-en="Product page">עמוד מוצר</span></button><button class="vt" data-i="3"><span class="t" data-he="סל קניות" data-en="Cart">סל קניות</span></button><button class="vt" data-i="4"><span class="t" data-he="עמוד תשלום" data-en="Payment">עמוד תשלום</span></button></div>
+  <div class="vctl">
+    <button class="prev" aria-label="prev">‹</button><span class="cnt mono"><b>1</b> / 5</span><button class="next" aria-label="next">›</button>
+    <span class="lbl"><span class="vl cur" data-i="0"><span class="t" data-he="דף הבית" data-en="Home">דף הבית</span></span><span class="vl" data-i="1"><span class="t" data-he="קטגוריה: מכנסיים" data-en="Category: pants">קטגוריה: מכנסיים</span></span><span class="vl" data-i="2"><span class="t" data-he="עמוד מוצר" data-en="Product page">עמוד מוצר</span></span><span class="vl" data-i="3"><span class="t" data-he="סל קניות" data-en="Cart">סל קניות</span></span><span class="vl" data-i="4"><span class="t" data-he="עמוד תשלום" data-en="Payment">עמוד תשלום</span></span></span>
+    <button class="open" data-open-cur="mishmesh-web"><span class="t" data-he="פתח בגדול ⤢" data-en="Open large ⤢">פתח בגדול ⤢</span></button>
+  </div>
+  <div class="brw"><div class="bar"><i></i><i></i><i></i><span></span></div><div class="vp"><img src="assets/img/ccad5f2c3e.webp" alt="דף הבית" data-i="0" class="pg cur" loading="lazy" data-open="mishmesh-web:0"><img src="assets/img/83a0390f90.webp" alt="קטגוריה: מכנסיים" data-i="1" class="pg" loading="lazy" data-open="mishmesh-web:1"><img src="assets/img/1781f9b590.webp" alt="עמוד מוצר" data-i="2" class="pg" loading="lazy" data-open="mishmesh-web:2"><img src="assets/img/99bd48aae0.webp" alt="סל קניות" data-i="3" class="pg" loading="lazy" data-open="mishmesh-web:3"><img src="assets/img/f588eef050.webp" alt="עמוד תשלום" data-i="4" class="pg" loading="lazy" data-open="mishmesh-web:4"></div></div>
+</div></section><section class="sec ux"><div class="hd"><div><h3 class="syne" style="font-weight:800;letter-spacing:-.03em">UX</h3></div><p><span class="t" data-he="Wireframes בגווני אפור (Low-fi) עם הערות על כל החלטה. בשלב הזה קובעים את המבנה, לפני שמגיעים לצבע." data-en="Low-fi grayscale wireframes with notes on each decision. This is where the structure gets set, before color comes in.">Wireframes בגווני אפור (Low-fi) עם הערות על כל החלטה. בשלב הזה קובעים את המבנה, לפני שמגיעים לצבע.</span></p></div><div class="viewer ux" data-g="mishmesh-ux" data-n="3" tabindex="0">
+  <div class="vtabs"><button class="vt cur" data-i="0"><span class="t" data-he="Wireframe: דף הבית" data-en="Wireframe: home">Wireframe: דף הבית</span></button><button class="vt" data-i="1"><span class="t" data-he="Wireframe: קטגוריה" data-en="Wireframe: category">Wireframe: קטגוריה</span></button><button class="vt" data-i="2"><span class="t" data-he="Wireframe: מוצר" data-en="Wireframe: product">Wireframe: מוצר</span></button></div>
+  <div class="vctl">
+    <button class="prev" aria-label="prev">‹</button><span class="cnt mono"><b>1</b> / 3</span><button class="next" aria-label="next">›</button>
+    <span class="lbl"><span class="vl cur" data-i="0"><span class="t" data-he="Wireframe: דף הבית" data-en="Wireframe: home">Wireframe: דף הבית</span></span><span class="vl" data-i="1"><span class="t" data-he="Wireframe: קטגוריה" data-en="Wireframe: category">Wireframe: קטגוריה</span></span><span class="vl" data-i="2"><span class="t" data-he="Wireframe: מוצר" data-en="Wireframe: product">Wireframe: מוצר</span></span></span>
+    <button class="open" data-open-cur="mishmesh-ux"><span class="t" data-he="פתח בגדול ⤢" data-en="Open large ⤢">פתח בגדול ⤢</span></button>
+  </div>
+  <div class="brw ux"><div class="vp"><img src="assets/img/a2564898e8.webp" alt="Wireframe: דף הבית" data-i="0" class="pg cur" loading="lazy" data-open="mishmesh-ux:0"><img src="assets/img/8d413c3ce5.webp" alt="Wireframe: קטגוריה" data-i="1" class="pg" loading="lazy" data-open="mishmesh-ux:1"><img src="assets/img/f803014ad8.webp" alt="Wireframe: מוצר" data-i="2" class="pg" loading="lazy" data-open="mishmesh-ux:2"></div></div>
+</div></section><section class="sec deck"><div class="hd"><div><h3 style="font-weight:800;letter-spacing:-.02em"><span class="t" data-he="ספר מותג" data-en="Brand book">ספר מותג</span></h3></div></div><div class="deck" data-n="16" tabindex="0">
+  <div class="track"><div class="slide" data-i="0"><img src="assets/img/d1415e4afe.webp" alt="page 1" loading="lazy" data-open="mishmesh-deck:0"></div><div class="slide" data-i="1"><img src="assets/img/7a0c88383a.webp" alt="page 2" loading="lazy" data-open="mishmesh-deck:1"></div><div class="slide" data-i="2"><img src="assets/img/14d5ff7865.webp" alt="page 3" loading="lazy" data-open="mishmesh-deck:2"></div><div class="slide" data-i="3"><img src="assets/img/3fabe061f5.webp" alt="page 4" loading="lazy" data-open="mishmesh-deck:3"></div><div class="slide" data-i="4"><img src="assets/img/1a6c3d1c57.webp" alt="page 5" loading="lazy" data-open="mishmesh-deck:4"></div><div class="slide" data-i="5"><img src="assets/img/6100fe67f4.webp" alt="page 6" loading="lazy" data-open="mishmesh-deck:5"></div><div class="slide" data-i="6"><img src="assets/img/817a0a58ba.webp" alt="page 7" loading="lazy" data-open="mishmesh-deck:6"></div><div class="slide" data-i="7"><img src="assets/img/4ca6e57a6f.webp" alt="page 8" loading="lazy" data-open="mishmesh-deck:7"></div><div class="slide" data-i="8"><img src="assets/img/d3fd21abf4.webp" alt="page 9" loading="lazy" data-open="mishmesh-deck:8"></div><div class="slide" data-i="9"><img src="assets/img/33e9afebbf.webp" alt="page 10" loading="lazy" data-open="mishmesh-deck:9"></div><div class="slide" data-i="10"><img src="assets/img/af96374e1b.webp" alt="page 11" loading="lazy" data-open="mishmesh-deck:10"></div><div class="slide" data-i="11"><img src="assets/img/d2c6f734da.webp" alt="page 12" loading="lazy" data-open="mishmesh-deck:11"></div><div class="slide" data-i="12"><img src="assets/img/3b29a25284.webp" alt="page 13" loading="lazy" data-open="mishmesh-deck:12"></div><div class="slide" data-i="13"><img src="assets/img/525487ea0b.webp" alt="page 14" loading="lazy" data-open="mishmesh-deck:13"></div><div class="slide" data-i="14"><img src="assets/img/f3901040ff.webp" alt="page 15" loading="lazy" data-open="mishmesh-deck:14"></div><div class="slide" data-i="15"><img src="assets/img/d9d469980a.webp" alt="page 16" loading="lazy" data-open="mishmesh-deck:15"></div></div>
+  <div class="ctl"><button class="prev" aria-label="prev">‹</button><span class="cnt mono"><b>1</b> / 16</span><button class="next" aria-label="next">›</button><button class="open" data-open-cur="mishmesh-deck"><span class="t" data-he="פתח בגדול ⤢" data-en="Open large ⤢">פתח בגדול ⤢</span></button></div>
+  <div class="thumbs"><button class="th" data-to="0" aria-label="page 1"><img src="assets/img/d1415e4afe.webp" alt="" loading="lazy"></button><button class="th" data-to="1" aria-label="page 2"><img src="assets/img/7a0c88383a.webp" alt="" loading="lazy"></button><button class="th" data-to="2" aria-label="page 3"><img src="assets/img/14d5ff7865.webp" alt="" loading="lazy"></button><button class="th" data-to="3" aria-label="page 4"><img src="assets/img/3fabe061f5.webp" alt="" loading="lazy"></button><button class="th" data-to="4" aria-label="page 5"><img src="assets/img/1a6c3d1c57.webp" alt="" loading="lazy"></button><button class="th" data-to="5" aria-label="page 6"><img src="assets/img/6100fe67f4.webp" alt="" loading="lazy"></button><button class="th" data-to="6" aria-label="page 7"><img src="assets/img/817a0a58ba.webp" alt="" loading="lazy"></button><button class="th" data-to="7" aria-label="page 8"><img src="assets/img/4ca6e57a6f.webp" alt="" loading="lazy"></button><button class="th" data-to="8" aria-label="page 9"><img src="assets/img/d3fd21abf4.webp" alt="" loading="lazy"></button><button class="th" data-to="9" aria-label="page 10"><img src="assets/img/33e9afebbf.webp" alt="" loading="lazy"></button><button class="th" data-to="10" aria-label="page 11"><img src="assets/img/af96374e1b.webp" alt="" loading="lazy"></button><button class="th" data-to="11" aria-label="page 12"><img src="assets/img/d2c6f734da.webp" alt="" loading="lazy"></button><button class="th" data-to="12" aria-label="page 13"><img src="assets/img/3b29a25284.webp" alt="" loading="lazy"></button><button class="th" data-to="13" aria-label="page 14"><img src="assets/img/525487ea0b.webp" alt="" loading="lazy"></button><button class="th" data-to="14" aria-label="page 15"><img src="assets/img/f3901040ff.webp" alt="" loading="lazy"></button><button class="th" data-to="15" aria-label="page 16"><img src="assets/img/d9d469980a.webp" alt="" loading="lazy"></button></div>
+</div></section>
+
+<a class="nextp" href="#/nef" style="--c:#F70102;--glow:rgba(247,1,2,.25)"><span class="k mono"><span class="t" data-he="הפרויקט הבא" data-en="Next project">הפרויקט הבא</span></span><span class="syne nm">NEF Wine Bar</span><span class="arr">→</span></a>
+</article><article class="proj" id="p-nef" style="--c:#F70102;--c2:#5A1B2E;--glow:rgba(247,1,2,.25)" hidden>
+<div class="orb"></div>
+<header class="ph">
+  <div class="crumbs mono"><a href="#/" class="back"><span class="t" data-he="← כל העבודות" data-en="← All work">← כל העבודות</span></a><span>01 / 05</span></div>
+  <h1 class="syne" style="white-space:nowrap">NEF <span style="font-size:.42em;font-weight:600;letter-spacing:-.02em">Wine Bar</span></h1>
+  <p class="tag"><span class="t" data-he="WINE NOT?‎ הוא בר יין פריזאי. בניתי לו ספר מותג, חמישה מסכי UI וערכת שיווק שלמה, מסטורי באינסטגרם ועד שלט חוצות." data-en="WINE NOT?‎ is a Parisian wine bar. I built its brand book, five UI screens and a full marketing kit, from Instagram stories to billboards.">WINE NOT?‎ הוא בר יין פריזאי. בניתי לו ספר מותג, חמישה מסכי UI וערכת שיווק שלמה, מסטורי באינסטגרם ועד שלט חוצות.</span></p>
+  
+  <ol class="pts"><li><i class="mono">1</i><div><b><span class="t" data-he="האתגר" data-en="The challenge">האתגר</span></b><p><span class="t" data-he="בר יין שרוצה להרגיש כמו לילה בפריז. המותג צריך לעבוד באותה עוצמה על שלט חוצות, בסטורי ובאתר." data-en="A wine bar that wants to feel like a night in Paris. The brand had to work just as strongly on a billboard, a story and the website.">בר יין שרוצה להרגיש כמו לילה בפריז. המותג צריך לעבוד באותה עוצמה על שלט חוצות, בסטורי ובאתר.</span></p></div></li><li><i class="mono">2</i><div><b><span class="t" data-he="מה עשיתי" data-en="What I did">מה עשיתי</span></b><p><span class="t" data-he="יצרתי למותג שפה ויזואלית דרמטית ואלגנטית: שחור ולבן עם נגיעה אחת של אדום ניאון, כמו האורות של פריז בלילה. הלוגו הדק והסלוגן &quot;WINE NOT?‎&quot; נותנים לבר אישיות קלילה ובטוחה, שעוברת באותה צורה מהשלט ברחוב ועד המסך בטלפון." data-en="I created a dramatic, elegant visual language for the brand: black and white with a single touch of neon red, like Paris lights at night. The fine-line logo and the &quot;WINE NOT?‎&quot; tagline give the bar a light, confident personality that carries the same way from the street sign to the phone screen.">יצרתי למותג שפה ויזואלית דרמטית ואלגנטית: שחור ולבן עם נגיעה אחת של אדום ניאון, כמו האורות של פריז בלילה. הלוגו הדק והסלוגן &quot;WINE NOT?‎&quot; נותנים לבר אישיות קלילה ובטוחה, שעוברת באותה צורה מהשלט ברחוב ועד המסך בטלפון.</span></p></div></li><li><i class="mono">3</i><div><b><span class="t" data-he="התוצאה" data-en="The result">התוצאה</span></b><p><span class="t" data-he="מותג שלם שמרגיש אותו דבר בכל מקום שהלקוח פוגש אותו: מהפוסטר ברחוב, דרך הסטורי באינסטגרם ועד האתר. חוויה אחת עקבית שמזמינה להיכנס, לטעום ולחזור." data-en="A complete brand that feels the same wherever customers meet it: from the poster on the street, through the Instagram story, to the website. One consistent experience that invites people to come in, taste and come back.">מותג שלם שמרגיש אותו דבר בכל מקום שהלקוח פוגש אותו: מהפוסטר ברחוב, דרך הסטורי באינסטגרם ועד האתר. חוויה אחת עקבית שמזמינה להיכנס, לטעום ולחזור.</span></p></div></li></ol>
+</header>
+<section class="sec web"><div class="hd"><div><h3 class="syne" style="font-weight:800;letter-spacing:-.03em">Web</h3></div></div><div class="viewer web" data-g="nef-web" data-n="5" tabindex="0">
+  <div class="vtabs"><button class="vt cur" data-i="0"><span class="t" data-he="Home" data-en="Home">Home</span></button><button class="vt" data-i="1"><span class="t" data-he="Wine selection" data-en="Wine selection">Wine selection</span></button><button class="vt" data-i="2"><span class="t" data-he="Product: Cabernet Sauvignon" data-en="Product: Cabernet Sauvignon">Product: Cabernet Sauvignon</span></button><button class="vt" data-i="3"><span class="t" data-he="Your cart" data-en="Your cart">Your cart</span></button><button class="vt" data-i="4"><span class="t" data-he="Payment" data-en="Payment">Payment</span></button></div>
+  <div class="vctl">
+    <button class="prev" aria-label="prev">‹</button><span class="cnt mono"><b>1</b> / 5</span><button class="next" aria-label="next">›</button>
+    <span class="lbl"><span class="vl cur" data-i="0"><span class="t" data-he="Home" data-en="Home">Home</span></span><span class="vl" data-i="1"><span class="t" data-he="Wine selection" data-en="Wine selection">Wine selection</span></span><span class="vl" data-i="2"><span class="t" data-he="Product: Cabernet Sauvignon" data-en="Product: Cabernet Sauvignon">Product: Cabernet Sauvignon</span></span><span class="vl" data-i="3"><span class="t" data-he="Your cart" data-en="Your cart">Your cart</span></span><span class="vl" data-i="4"><span class="t" data-he="Payment" data-en="Payment">Payment</span></span></span>
+    <button class="open" data-open-cur="nef-web"><span class="t" data-he="פתח בגדול ⤢" data-en="Open large ⤢">פתח בגדול ⤢</span></button>
+  </div>
+  <div class="brw"><div class="bar"><i></i><i></i><i></i><span></span></div><div class="vp"><img src="assets/img/b86b67ec31.webp" alt="Home" data-i="0" class="pg cur" loading="lazy" data-open="nef-web:0"><img src="assets/img/9549cba781.webp" alt="Wine selection" data-i="1" class="pg" loading="lazy" data-open="nef-web:1"><img src="assets/img/4ba463e682.webp" alt="Product: Cabernet Sauvignon" data-i="2" class="pg" loading="lazy" data-open="nef-web:2"><img src="assets/img/f582af9d0e.webp" alt="Your cart" data-i="3" class="pg" loading="lazy" data-open="nef-web:3"><img src="assets/img/025e6237ff.webp" alt="Payment" data-i="4" class="pg" loading="lazy" data-open="nef-web:4"></div></div>
+</div></section><section class="sec deck"><div class="hd"><div><h3 style="font-weight:800;letter-spacing:-.02em"><span class="t" data-he="ספר מותג" data-en="Brand book">ספר מותג</span></h3></div></div><div class="deck" data-n="15" tabindex="0">
+  <div class="track"><div class="slide" data-i="0"><img src="assets/img/d42ff3cf7e.webp" alt="page 1" loading="lazy" data-open="nef-deck:0"></div><div class="slide" data-i="1"><img src="assets/img/37a8aaba8f.webp" alt="page 2" loading="lazy" data-open="nef-deck:1"></div><div class="slide" data-i="2"><img src="assets/img/760d7a9f3c.webp" alt="page 3" loading="lazy" data-open="nef-deck:2"></div><div class="slide" data-i="3"><img src="assets/img/8beab855d7.webp" alt="page 4" loading="lazy" data-open="nef-deck:3"></div><div class="slide" data-i="4"><img src="assets/img/329551bf7f.webp" alt="page 5" loading="lazy" data-open="nef-deck:4"></div><div class="slide" data-i="5"><img src="assets/img/f203b1c48d.webp" alt="page 6" loading="lazy" data-open="nef-deck:5"></div><div class="slide" data-i="6"><img src="assets/img/66e6456a06.webp" alt="page 7" loading="lazy" data-open="nef-deck:6"></div><div class="slide" data-i="7"><img src="assets/img/ed252016d0.webp" alt="page 8" loading="lazy" data-open="nef-deck:7"></div><div class="slide" data-i="8"><img src="assets/img/f512e8101c.webp" alt="page 9" loading="lazy" data-open="nef-deck:8"></div><div class="slide" data-i="9"><img src="assets/img/94716cc0cd.webp" alt="page 10" loading="lazy" data-open="nef-deck:9"></div><div class="slide" data-i="10"><img src="assets/img/4617a65457.webp" alt="page 11" loading="lazy" data-open="nef-deck:10"></div><div class="slide" data-i="11"><img src="assets/img/4ab19d40ca.webp" alt="page 12" loading="lazy" data-open="nef-deck:11"></div><div class="slide" data-i="12"><img src="assets/img/de32e5bba5.webp" alt="page 13" loading="lazy" data-open="nef-deck:12"></div><div class="slide" data-i="13"><img src="assets/img/6168db3108.webp" alt="page 14" loading="lazy" data-open="nef-deck:13"></div><div class="slide" data-i="14"><img src="assets/img/e02f2893b2.webp" alt="page 15" loading="lazy" data-open="nef-deck:14"></div></div>
+  <div class="ctl"><button class="prev" aria-label="prev">‹</button><span class="cnt mono"><b>1</b> / 15</span><button class="next" aria-label="next">›</button><button class="open" data-open-cur="nef-deck"><span class="t" data-he="פתח בגדול ⤢" data-en="Open large ⤢">פתח בגדול ⤢</span></button></div>
+  <div class="thumbs"><button class="th" data-to="0" aria-label="page 1"><img src="assets/img/d42ff3cf7e.webp" alt="" loading="lazy"></button><button class="th" data-to="1" aria-label="page 2"><img src="assets/img/37a8aaba8f.webp" alt="" loading="lazy"></button><button class="th" data-to="2" aria-label="page 3"><img src="assets/img/760d7a9f3c.webp" alt="" loading="lazy"></button><button class="th" data-to="3" aria-label="page 4"><img src="assets/img/8beab855d7.webp" alt="" loading="lazy"></button><button class="th" data-to="4" aria-label="page 5"><img src="assets/img/329551bf7f.webp" alt="" loading="lazy"></button><button class="th" data-to="5" aria-label="page 6"><img src="assets/img/f203b1c48d.webp" alt="" loading="lazy"></button><button class="th" data-to="6" aria-label="page 7"><img src="assets/img/66e6456a06.webp" alt="" loading="lazy"></button><button class="th" data-to="7" aria-label="page 8"><img src="assets/img/ed252016d0.webp" alt="" loading="lazy"></button><button class="th" data-to="8" aria-label="page 9"><img src="assets/img/f512e8101c.webp" alt="" loading="lazy"></button><button class="th" data-to="9" aria-label="page 10"><img src="assets/img/94716cc0cd.webp" alt="" loading="lazy"></button><button class="th" data-to="10" aria-label="page 11"><img src="assets/img/4617a65457.webp" alt="" loading="lazy"></button><button class="th" data-to="11" aria-label="page 12"><img src="assets/img/4ab19d40ca.webp" alt="" loading="lazy"></button><button class="th" data-to="12" aria-label="page 13"><img src="assets/img/de32e5bba5.webp" alt="" loading="lazy"></button><button class="th" data-to="13" aria-label="page 14"><img src="assets/img/6168db3108.webp" alt="" loading="lazy"></button><button class="th" data-to="14" aria-label="page 15"><img src="assets/img/e02f2893b2.webp" alt="" loading="lazy"></button></div>
+</div></section>
+
+<a class="nextp" href="#/eunye" style="--c:#E97A4B;--glow:rgba(233,122,75,.32)"><span class="k mono"><span class="t" data-he="הפרויקט הבא" data-en="Next project">הפרויקט הבא</span></span><span class="syne nm">EUNYE</span><span class="arr">→</span></a>
+</article>
+
+<!-- ================= LIGHTBOX ================= -->
+<div class="lb" id="lb" role="dialog" aria-modal="true">
+  <div class="top"><button class="pv" aria-label="previous">‹</button><button class="nx" aria-label="next">›</button><span class="t" id="lbT"></span><span class="n mono" id="lbN"></span><button class="x" aria-label="close">✕</button></div>
+  <div class="body"><img loading="lazy" decoding="async" id="lbI" src="" alt=""></div>
+</div>
+
+<script>const CVHE="assets/img/6bdc709507.webp",CVEN="assets/img/b3b01d5946.webp";
+
+(function(){
+  /* ---------- i18n ---------- */
+  let lang='he';try{lang=localStorage.getItem('lang')||'he'}catch(e){}
+  function setLang(l){lang=l;document.documentElement.lang=l;document.documentElement.dir=l==='he'?'rtl':'ltr';document.body.style.direction=l==='he'?'rtl':'ltr';
+    document.querySelectorAll('.t').forEach(el=>{el.textContent=el.dataset[l]||el.dataset.he});
+    document.querySelectorAll('.lang button').forEach(b=>b.classList.toggle('on',b.dataset.lang===l));
+    try{localStorage.setItem('lang',l)}catch(e){}}
+  document.querySelectorAll('.lang button').forEach(b=>b.onclick=()=>setLang(b.dataset.lang));
+  setLang(lang);
+
+  /* ---------- hero wall ---------- */
+  const WALL=[["assets/img/2b745d3d0c.webp",0],["assets/img/b131f7eaec.webp",0],["assets/img/f7c78f8270.webp",0],["assets/img/836a0edd43.webp",0],["assets/img/d4259258d3.webp",1],["assets/img/13a8dfc748.webp",0],["assets/img/6d0c820fe6.webp",1],["assets/img/6026c71d17.webp",1],["assets/img/25e8e2d882.webp",0],["assets/img/d1304d6d54.webp",0],["assets/img/adb217ef0c.webp",1],["assets/img/877335d52c.webp",0],["assets/img/c4b20e3aa8.webp",0],["assets/img/f4fceae4eb.webp",0],["assets/img/dbf10eb9ea.webp",1],["assets/img/0f0350d3c8.webp",0],["assets/img/80065fbe4b.webp",1]];
+  const flow=document.getElementById('flow'),plane=document.getElementById('plane'),hero=document.querySelector('.hero');
+  let h='';for(let i=0;i<42;i++){const [src,tall]=WALL[i%WALL.length];h+=`<div class="cardw${tall?' tall':''}"><img loading="lazy" decoding="async" src="${src}" alt=""></div>`}
+  flow.innerHTML=h;
+  hero.addEventListener('pointermove',e=>{const r=hero.getBoundingClientRect();const x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;plane.style.transform=`rotateX(${58-y*16}deg) rotateZ(${-18+x*16}deg) translateZ(-200px) translateX(${-x*260}px) translateY(${-y*120}px)`});
+
+  /* ---------- reveal ---------- */
+  const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{rootMargin:'0px 0px -8% 0px'});
+  function reveal(){const root=[...document.querySelectorAll('#home,.proj')].find(x=>!x.hidden);if(!root)return;
+    root.querySelectorAll('.card,.viewer,.deck,.fx,.pts li,.sec .hd,.stats>div,.stage-me').forEach(el=>{el.classList.add('rv');if(el.classList.contains('in'))return;const r=el.getBoundingClientRect();if(r.top<innerHeight*1.05){el.classList.add('in')}else io.observe(el)})}
+  setInterval(()=>{document.querySelectorAll('.rv:not(.in)').forEach(el=>{const r=el.getBoundingClientRect();if(r.top<innerHeight&&r.bottom>0)el.classList.add('in')})},400);
+
+  /* ---------- router ---------- */
+  const home=document.getElementById('home'),projs=[...document.querySelectorAll('.proj')];
+  function route(){
+    const hsh=location.hash||'#/';
+    const m=hsh.match(/^#\/([a-z]+)/);const id=m?m[1]:null;
+    const target=id&&document.getElementById('p-'+id);
+    home.hidden=!!target;projs.forEach(p=>p.hidden=(p!==target));
+    const anchor=hsh.split('#')[2];
+    if(anchor){const el=document.getElementById(anchor);if(el){setTimeout(()=>el.scrollIntoView({behavior:'instant',block:'start'}),0);reveal();return}}
+    window.scrollTo({top:0,behavior:'instant'});reveal();
+  }
+  addEventListener('hashchange',route);
+  document.addEventListener('click',e=>{const a=e.target.closest('a[href^="#/#"]');if(a&&a.getAttribute('href')===location.hash){e.preventDefault();route()}});
+  document.querySelectorAll('a.mail').forEach(a=>a.addEventListener('click',()=>{try{navigator.clipboard.writeText('meshi316@gmail.com').then(()=>{const t=a.textContent;a.textContent=document.documentElement.lang==='en'?'Email copied ✓':'המייל הועתק ✓';setTimeout(()=>a.textContent=t,1800)}).catch(()=>{})}catch(_){}}));
+  document.addEventListener('click',e=>{const a=e.target.closest('a[href="#work"],a[href="#about"]');if(a&&!home.hidden){e.preventDefault();document.getElementById(a.getAttribute('href').slice(1)).scrollIntoView({behavior:'smooth'})}});
+  route();
+
+  /* ---------- progress ---------- */
+  const prog=document.getElementById('prog');
+  addEventListener('scroll',()=>{prog.style.width=(scrollY/(document.documentElement.scrollHeight-innerHeight)*100)+'%'},{passive:true});
+
+  /* ---------- viewers ---------- */
+  document.querySelectorAll('.viewer').forEach(v=>{
+    const n=+v.dataset.n,tabs=[...v.querySelectorAll('.vt')],pgs=[...v.querySelectorAll('.vp img')],lbls=[...v.querySelectorAll('.vl')],cnt=v.querySelector('.cnt b'),vp=v.querySelector('.vp');
+    let cur=0;
+    function go(i){cur=(i+n)%n;tabs.forEach((t,j)=>t.classList.toggle('cur',j===cur));pgs.forEach((p,j)=>p.classList.toggle('cur',j===cur));lbls.forEach((l,j)=>l.classList.toggle('cur',j===cur));cnt.textContent=cur+1;vp.scrollTop=0;tabs[cur].scrollIntoView({block:'nearest',inline:'nearest'})}
+    v.querySelector('.prev').onclick=()=>go(cur-1);v.querySelector('.next').onclick=()=>go(cur+1);
+    tabs.forEach(t=>t.onclick=()=>go(+t.dataset.i));
+    v.querySelector('[data-open-cur]').onclick=()=>openLB(v.dataset.g,cur);
+    v.addEventListener('keydown',e=>{if(e.key==='ArrowRight')go(cur+1);if(e.key==='ArrowLeft')go(cur-1)});
+    v._go=go;v._cur=()=>cur;
+  });
+
+  /* ---------- decks ---------- */
+  document.querySelectorAll('.deck').forEach(d=>{
+    const track=d.querySelector('.track'),slides=[...d.querySelectorAll('.slide')],thumbs=[...d.querySelectorAll('.th')],cnt=d.querySelector('.cnt b');
+    let cur=0;
+    function go(i){cur=Math.max(0,Math.min(slides.length-1,i));track.scrollTo({left:slides[cur].offsetLeft,behavior:'smooth'})}
+    function sync(){const w=track.clientWidth;const i=Math.round(track.scrollLeft/(w+18));if(i!==cur&&i>=0&&i<slides.length){cur=i}cnt.textContent=cur+1;thumbs.forEach((t,j)=>t.classList.toggle('cur',j===cur));thumbs[cur]?.scrollIntoView({block:'nearest',inline:'nearest'})}
+    track.addEventListener('scroll',()=>requestAnimationFrame(sync),{passive:true});
+    d.querySelector('.prev').onclick=()=>go(cur-1);d.querySelector('.next').onclick=()=>go(cur+1);
+    thumbs.forEach(t=>t.onclick=()=>go(+t.dataset.to));
+    d.querySelector('[data-open-cur]').onclick=()=>openLB(d.querySelector('[data-open-cur]').dataset.openCur,cur);
+    d.addEventListener('keydown',e=>{if(e.key==='ArrowRight')go(cur+1);if(e.key==='ArrowLeft')go(cur-1)});
+    sync();
+  });
+
+  /* ---------- lightbox ---------- */
+  const lb=document.getElementById('lb'),lbI=document.getElementById('lbI'),lbT=document.getElementById('lbT'),lbN=document.getElementById('lbN');
+  let G=null,GI=0;
+  function groupItems(g){
+    if(g==='cv'){return [{src:(lang==='he'?CVHE:CVEN),label:(lang==='he'?'קורות חיים':'CV'),cls:'cvimg'}]}
+    if(g.endsWith('-deck')){const d=document.querySelector(`[data-open-cur="${g}"]`).closest('.deck');return [...d.querySelectorAll('.slide img')].map((im,i)=>({src:im.src,label:(lang==='he'?'עמוד ':'Page ')+(i+1),cls:'sl'}))}
+    const v=document.querySelector(`.viewer[data-g="${g}"]`);
+    if(v){const ls=[...v.querySelectorAll('.vl')];return [...v.querySelectorAll('.vp img')].map((im,i)=>({src:im.src,label:ls[i]?.textContent||'',cls:g.endsWith('-mob')?'ph':''}))}
+    return [...document.querySelectorAll(`[data-g="${g}"]`)].map(f=>({src:f.querySelector('img').src,label:f.querySelector('figcaption')?.textContent||'',cls:''}))
+  }
+  function openLB(g,i){G=groupItems(g);GI=i;show();lb.classList.add('on');document.body.style.overflow='hidden';lb.scrollTop=0}
+  function show(){const it=G[GI];lbI.src=it.src;lbI.className=it.cls;lbT.textContent=it.label;lbN.textContent=(GI+1)+' / '+G.length;lb.scrollTop=0}
+  function closeLB(){lb.classList.remove('on');document.body.style.overflow='';lbI.src=''}
+  document.addEventListener('click',e=>{const o=e.target.closest('[data-open]');if(o){e.preventDefault();const [g,i]=o.dataset.open.split(':');openLB(g,+i)}});
+  lb.querySelector('.x').onclick=closeLB;
+  lb.querySelector('.pv').onclick=()=>{GI=(GI-1+G.length)%G.length;show()};
+  lb.querySelector('.nx').onclick=()=>{GI=(GI+1)%G.length;show()};
+  lb.addEventListener('click',e=>{if(e.target===lb||e.target.classList.contains('body'))closeLB()});
+  document.addEventListener('keydown',e=>{if(!lb.classList.contains('on'))return;if(e.key==='Escape')closeLB();if(e.key==='ArrowRight'){GI=(GI+1)%G.length;show()}if(e.key==='ArrowLeft'){GI=(GI-1+G.length)%G.length;show()}});
+})();
+</script>
+
+</body></html>
